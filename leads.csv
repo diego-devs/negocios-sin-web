@@ -1,0 +1,35 @@
+id,nombre,giro,direccion,colonia,cp,telefono,email,tiene_web,url_web,estado,demo_url,notas
+1,Natural Lashes México,Estética/Belleza,"Nueces 149 Local C",Nueva Santa María,02800,"(55) 5914 7206",,no,,,Vecina directa - misma calle Nueces
+2,Tapia Villanueva Florencio (Cerrajería),Cerrajería,"Nueces 168",Nueva Santa María,02800,"(55) 5556 6545",,no,,,ENFRENTE de Nueces 167
+3,"De la O Ramírez Karla (Cafetería)",Cafetería,"Nueces 179",Nueva Santa María,02800,"(55) 2631 8202",,no,,,Vecina directa - misma calle Nueces
+4,Stilisimo,Estética/Belleza,"Piñón 151 2do Piso",Nueva Santa María,02800,"(722) 219 2215",,no,,,En la colonia
+5,Cambre Caballero Jaime,Dentista,"Ave de los Maestros 538",Nueva Santa María,02800,"(55) 5556 9007",,no,,,Consultorio dental
+6,Sandoval Guizar Carlos Gmo,Dentista,"Clavelinas 208",Nueva Santa María,02800,"(55) 5356 6814",,no,,,Consultorio dental
+7,Tacosdefiesta.com,Restaurante/Tacos,"Cocoteros 128",Nueva Santa María,02800,,,no,,,Servicio de tacos para fiestas
+8,Panadería Patricia (Karsapan),Panadería,"Invernadero 212",Nueva Santa María,02800,"(55) 5556 1279",,si,https://karsapan.com,descartado,,Ya tiene web - Karsapan
+9,Panadería Tradicional Queretana,Panadería,"Romero de Terreros 616",Nueva Santa María,02800,"(55) 1107 7475",,no,,,Panadería local
+10,Cortes Alvarez Veronica (Cafetería),Cafetería,"Guanábana 154-1",Nueva Santa María,02800,"(55) 5355 1421",,no,,,Cafetería local
+11,Corporación Automotriz LAM,Taller Mecánico,"Platanales 206",Nueva Santa María,02800,"(55) 5356 7618",,no,,,Taller mecánico
+12,Grupo Mercurio de Transportes,Transporte,"Piña 297",Nueva Santa María,02800,"(55) 5355 3606",,no,,,Empresa de transporte
+13,Concepto Odontológico Integral,Dentista,"Cairo 141",Del Recreo,02070,"(55) 5342-0821",,no,,,Colonia vecina
+14,Auto Servicio Egipto,Taller Mecánico,"Egipto 84",Clavería,02080,"(55) 5341 3151",,no,,,Colonia vecina
+15,Automotores Alemanes,Taller Mecánico,"Egipto 167",Clavería,02080,"(55) 5584 0272",,no,,,Colonia vecina
+16,Cerrajería Neo Key,Cerrajería,"Jardín (Home Depot) 245",Tlatilco,02860,"(55) 5356 1537",,no,,,Colonia vecina
+17,Cerrajerías A Tarzan López,Cerrajería,"Cuitláhuac 2928-B",Clavería,02080,"(55) 5341 5851",,no,,,Colonia vecina
+18,Plomería y Electricidad Nieto,Plomería,"Jardín S/N",Amp. del Gas,02970,"(55) 5355 5639",,no,,,Colonia vecina
+19,Plomería Jiménez,Plomería,"Azcapotzalco 456",Centro Azcapotzalco,02000,"(55) 5352 2376",,no,,,Cercano
+20,Servicio Mecánico Automotriz Ed,Taller Mecánico,"Las Granjas 538",Santo Tomás,02020,"(55) 5352 0654",,no,,,Cercano
+21,Controladora de Farmacias,Farmacia,"Cuitláhuac 469",Hogar y Seguridad,02820,"(55) 5356 1156",,no,,,Colonia vecina
+22,Nicos,Restaurante,"Cuitláhuac 3102",Clavería,02080,,,si,https://www.nicos.mx,,Ya tiene web - descartar
+23,Restaurante California,Restaurante,"Camarones 488",El Recreo,02080,,,no,,,Cercano
+24,El Portón,Restaurante,"Nextengo 78",Sta Cruz Acayucan,02770,"(55) 5352-0722",,no,,,Cercano
+25,Barbacoa El Caporal,Restaurante,"Irapuato 86",Clavería,02080,,,no,,,Colonia vecina
+26,Antojitos Yucatecos Montejo,Restaurante,"Clavería 54 Loc A",Clavería,02080,,,no,,,Colonia vecina
+27,Gimnasio Activo,Gimnasio,"Aquiles Serdán 400 Loc 210",San Bartolo,02720,"(55) 1742 1626",,no,,,Azcapotzalco
+28,Farmacia Franco,Farmacia,"Abasolo 256",Arenal,02980,"(55) 5355 9775",,no,,,Colonia vecina
+29,El Vallad (Panadería),Panadería,"Cuitláhuac 307",Pro-Hogar,02600,"(55) 5355 9401",,no,,,Cercano
+30,La Avenida (Panadería),Panadería,"Cuitláhuac 153",Pro-Hogar,02600,"(55) 5355 8829",,no,,,Cercano
+31,Café Inna Clavería,Cafetería,"Clavería 129",Clavería,02080,"(55) 6361-5128",,no,,,Colonia vecina
+32,Neko Café,Cafetería,"Capilla de los Reyes 60",Los Reyes,02010,"(55) 5512 5636",,no,,,Azcapotzalco
+33,Fonda Argentina Azcapotzalco,Fonda,"Del Rosario 1025 H01",El Rosario,02100,"(55) 5318-6654",,no,,,Azcapotzalco
+34,Rótulos a Pincel ABC Publicidad,Publicidad/Rótulos,"Camarones 509",Sind. Mex. Electricistas,02060,"(55) 5780 9570",,si,http://rotulosapincelabcpublicidad.com,,Ya tiene web - descartar
