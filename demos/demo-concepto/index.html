@@ -1,211 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concepto Odontológico Integral | Dentista en Azcapotzalco</title>
-  <meta name="description" content="Concepto Odontológico Integral — Odontología general, estética dental, prótesis, periodoncia, cirugía oral y radiografías digitales. Cairo 141, Col. Del Recreo, Azcapotzalco.">
-  <meta property="og:title" content="Concepto Odontológico Integral">
-  <meta property="og:description" content="Clínica dental moderna con atención integral en Azcapotzalco, CDMX.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1200">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../shared/base.css">
-  <style>
-    :root {
-      --color-primary: #0D9488;
-      --color-primary-dark: #065F56;
-      --color-accent: #99F6E4;
-      --color-gold: #14B8A6;
-      --color-overlay: rgba(6, 95, 86, 0.6);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concepto Odontológico Integral</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--lavender:#E9D5FF;--lavender-dark:#c084fc;--purple:#7c3aed;--white:#fff;--text:#2d2d3f;--text-light:#6b6b80;--bg:#faf7ff}
+body{font-family:'Quicksand',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+
+nav{position:fixed;top:0;width:100%;background:rgba(250,247,255,.92);backdrop-filter:blur(12px);z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+nav .logo{font-size:1.1rem;font-weight:700;color:var(--purple)}
+nav .logo small{display:block;font-size:.65rem;font-weight:500;color:var(--text-light);letter-spacing:2px;text-transform:uppercase}
+nav ul{list-style:none;display:flex;gap:1.5rem}
+nav ul a{font-size:.9rem;font-weight:600;color:var(--text-light);transition:color .3s}
+nav ul a:hover{color:var(--purple)}
+@media(max-width:768px){nav ul{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:7rem 2rem 4rem;background:linear-gradient(180deg,var(--lavender) 0%,var(--bg) 100%);position:relative}
+.hero-badge{display:inline-block;background:var(--white);color:var(--purple);font-size:.8rem;font-weight:700;padding:.4rem 1.2rem;border-radius:50px;margin-bottom:1.5rem;box-shadow:0 2px 10px rgba(124,58,237,.1)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:.5rem}
+.hero h1 span{color:var(--purple)}
+.hero p{max-width:550px;color:var(--text-light);font-size:1.05rem;margin-bottom:2rem}
+.btn{display:inline-block;padding:.9rem 2.5rem;background:var(--purple);color:var(--white);font-family:inherit;font-size:1rem;font-weight:700;border:none;cursor:pointer;border-radius:50px;transition:all .3s;box-shadow:0 4px 15px rgba(124,58,237,.3)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(124,58,237,.4)}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-title{text-align:center;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;margin-bottom:.3rem}
+.section-title span{color:var(--purple)}
+.section-sub{text-align:center;color:var(--text-light);margin-bottom:3rem}
+
+/* SERVICES */
+.services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;max-width:1000px;margin:0 auto}
+.service-card{background:var(--bg);border-radius:20px;padding:2rem;text-align:center;transition:all .3s;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(124,58,237,.12)}
+.service-icon{width:70px;height:70px;background:linear-gradient(135deg,var(--lavender),var(--lavender-dark));border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem}
+.service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.4rem;color:var(--text)}
+.service-card p{color:var(--text-light);font-size:.9rem}
+
+/* INTEGRAL */
+.integral{background:var(--bg);text-align:center}
+.integral-card{max-width:700px;margin:0 auto;background:linear-gradient(135deg,var(--lavender),#f3e8ff);border-radius:30px;padding:3rem 2rem;position:relative;overflow:hidden}
+.integral-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(124,58,237,.1);border-radius:50%}
+.integral-card h3{font-size:1.5rem;font-weight:700;color:var(--purple);margin-bottom:1rem}
+.integral-card p{color:var(--text);font-size:1rem;max-width:500px;margin:0 auto}
+
+/* LOCATION */
+.location{background:var(--white);text-align:center}
+.location-box{max-width:500px;margin:0 auto;background:var(--bg);border-radius:20px;padding:2rem;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.location-box p{color:var(--text-light);margin:.3rem 0}
+.location-box .addr{font-size:1.1rem;color:var(--text);font-weight:600}
+
+/* CONTACT */
+.contact{background:var(--bg);text-align:center}
+.contact-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
+.btn-wa{background:#25D366;color:#fff;padding:.9rem 2rem;font-family:inherit;font-size:1rem;font-weight:700;border:none;cursor:pointer;border-radius:50px;display:inline-flex;align-items:center;gap:.5rem;transition:all .3s}
+.btn-wa:hover{opacity:.85;transform:translateY(-2px)}
+.btn-call{background:transparent;border:2px solid var(--purple);color:var(--purple);padding:.85rem 2rem;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;border-radius:50px;display:inline-flex;align-items:center;gap:.5rem;transition:all .3s}
+.btn-call:hover{background:var(--purple);color:var(--white)}
+
+footer{text-align:center;padding:2rem;color:var(--text-light);font-size:.85rem;background:var(--white)}
+
+.fab{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 15px rgba(37,211,102,.3);z-index:99;transition:transform .3s}
+.fab:hover{transform:scale(1.1)}
+</style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="navbar-brand">Concepto <span>Odontológico</span></a>
-      <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+<nav>
+  <div class="logo">Concepto Odontológico<small>Integral</small></div>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#integral">Filosofía</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">✨ Clínica Boutique</div>
+  <h1>Tu sonrisa merece<br>atención <span>integral</span></h1>
+  <p>Odontología completa con un enfoque humano, cálido y personalizado. Cada tratamiento diseñado pensando en ti.</p>
+  <a href="https://wa.me/525553420821?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn">Agendar Cita</a>
+</section>
+
+<section class="services" id="servicios">
+  <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+  <p class="section-sub">Cuidado dental completo bajo un mismo techo</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <h3>Prevención</h3>
+      <p>Limpiezas, selladores y educación dental para evitar problemas futuros.</p>
     </div>
-  </nav>
-
-  <section id="inicio" class="hero" style="background-image: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1400&q=80');">
-    <div class="hero-content">
-      <p class="tagline">Salud dental integral y moderna</p>
-      <h1>Concepto Odontológico Integral</h1>
-      <p>Clínica dental con tecnología de vanguardia y un equipo comprometido con tu bienestar bucal en Azcapotzalco.</p>
-      <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-      <a href="https://wa.me/525553420821" class="btn btn-outline">Agenda tu cita</a>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Restauración</h3>
+      <p>Resinas, incrustaciones y coronas para devolver función y estética.</p>
     </div>
-  </section>
-
-  <section id="servicios" class="menu">
-    <div class="container">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <p class="section-subtitle">Atención dental completa con los más altos estándares</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&q=80" alt="Odontología general"></div>
-          <div class="menu-card-body">
-            <h4>Odontología General</h4>
-            <p>Consultas, diagnóstico, limpiezas, resinas y extracciones. Cuidado preventivo y restaurativo para toda la familia.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=400&q=80" alt="Estética dental"></div>
-          <div class="menu-card-body">
-            <h4>Estética Dental</h4>
-            <p>Blanqueamiento, carillas y diseño de sonrisa. Transforma tu sonrisa con resultados naturales y armoniosos.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&q=80" alt="Prótesis dentales"></div>
-          <div class="menu-card-body">
-            <h4>Prótesis Dentales</h4>
-            <p>Prótesis fijas y removibles, coronas y puentes. Recupera la funcionalidad y estética de tu dentadura.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80" alt="Periodoncia"></div>
-          <div class="menu-card-body">
-            <h4>Periodoncia</h4>
-            <p>Tratamiento de enfermedades de encías, curetajes y mantenimiento periodontal. Encías sanas para dientes fuertes.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80" alt="Cirugía oral"></div>
-          <div class="menu-card-body">
-            <h4>Cirugía Oral</h4>
-            <p>Extracciones de terceros molares, cirugías menores y procedimientos quirúrgicos con técnicas mínimamente invasivas.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400&q=80" alt="Radiografías digitales"></div>
-          <div class="menu-card-body">
-            <h4>Radiografías Digitales</h4>
-            <p>Diagnóstico por imagen de alta resolución con mínima radiación. Resultados inmediatos para un tratamiento preciso.</p>
-          </div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🦷</div>
+      <h3>Prótesis</h3>
+      <p>Prótesis fijas y removibles con materiales de alta calidad y naturalidad.</p>
     </div>
-  </section>
-
-  <section id="nosotros" class="about">
-    <div class="container">
-      <h2 class="section-title">Nuestra Clínica</h2>
-      <p class="section-subtitle">Espacios modernos diseñados para tu comodidad</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&q=80" alt="Clínica dental"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&q=80" alt="Equipo moderno"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400&q=80" alt="Sala de espera"></div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🏥</div>
+      <h3>Cirugía Oral</h3>
+      <p>Extracciones, cirugía de terceros molares y procedimientos quirúrgicos.</p>
     </div>
-  </section>
-
-  <section id="ubicacion" class="location">
-    <div class="container">
-      <h2 class="section-title">Encuéntranos</h2>
-      <p class="section-subtitle">Visítanos en nuestra clínica</p>
-      <div class="divider"></div>
-      <div class="location-grid">
-        <div class="map-wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.5!2d-99.19!3d19.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQ2Fpcm8gMTQxLCBEZWwgUmVjcmVv!5e0!3m2!1ses!2smx!4v1700000000000" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="location-info">
-          <h3>¿Cómo llegar?</h3>
-          <div class="info-item">
-            <span class="icon">📍</span>
-            <div><strong>Dirección</strong><p>Cairo 141, Col. Del Recreo,<br>Azcapotzalco, CDMX, CP 02070</p></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">📞</span>
-            <div><strong>Teléfono</strong><a href="tel:+525553420821">(55) 5342-0821</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">💬</span>
-            <div><strong>WhatsApp</strong><a href="https://wa.me/525553420821">Envíanos mensaje</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">🕐</span>
-            <div>
-              <strong>Horario</strong>
-              <table class="schedule-table">
-                <tr><td>Lunes - Viernes</td><td>9:00 AM - 8:00 PM</td></tr>
-                <tr><td>Sábado</td><td>9:00 AM - 3:00 PM</td></tr>
-                <tr><td>Domingo</td><td>Cerrado</td></tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">👶</div>
+      <h3>Odontopediatría</h3>
+      <p>Cuidado dental especializado para los más pequeños del hogar.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contacto" class="contact-cta">
-    <div class="container">
-      <h2>¡Tu primera consulta te espera!</h2>
-      <p>Agenda tu valoración por WhatsApp. Atención personalizada y planes de tratamiento a tu medida.</p>
-      <a href="https://wa.me/525553420821?text=Hola%2C%20quiero%20agendar%20una%20consulta%20dental" class="btn btn-primary">Agendar por WhatsApp</a>
-    </div>
-  </section>
+<section class="integral" id="integral">
+  <div class="integral-card">
+    <h3>¿Por qué "Integral"?</h3>
+    <p>Porque no tratamos dientes, tratamos personas. Nuestro enfoque integral considera tu salud bucal como parte de tu bienestar general, con planes de tratamiento personalizados que abordan cada aspecto de tu sonrisa.</p>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Concepto Odontológico Integral</h4>
-          <p>Clínica dental moderna con atención integral en la colonia Del Recreo, Azcapotzalco.</p>
-        </div>
-        <div>
-          <h4>Menú</h4>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <p>📍 Cairo 141, Col. Del Recreo</p>
-          <p>📞 <a href="tel:+525553420821">(55) 5342-0821</a></p>
-          <p>💬 <a href="https://wa.me/525553420821">WhatsApp</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Concepto Odontológico Integral. Sitio creado por <a href="#">Tu Agencia Web</a>.</p>
-      </div>
-    </div>
-  </footer>
+<section class="location" id="ubicacion">
+  <h2 class="section-title">Encuéntranos</h2>
+  <p class="section-sub">Te esperamos en un espacio diseñado para tu comodidad</p>
+  <div class="location-box">
+    <p style="font-size:2rem;margin-bottom:.5rem">📍</p>
+    <p class="addr">Cairo 141, Col. Del Recreo</p>
+    <p>CP 02070, Ciudad de México</p>
+    <p style="margin-top:1rem"><a href="https://maps.google.com/?q=Cairo+141+Col+Del+Recreo+02070" target="_blank" style="color:var(--purple);font-weight:600">Ver en Google Maps →</a></p>
+  </div>
+</section>
 
-  <a href="https://wa.me/525553420821?text=Hola%2C%20quiero%20información" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+<section class="contact" id="contacto">
+  <h2 class="section-title"><span>Contacto</span></h2>
+  <p class="section-sub">Agenda tu primera consulta de valoración</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/525553420821?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn-wa">📱 WhatsApp</a>
+    <a href="tel:+525553420821" class="btn-call">📞 (55) 5342-0821</a>
+  </div>
+</section>
 
-  <script>
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
+<footer>© 2025 Concepto Odontológico Integral. Todos los derechos reservados.</footer>
+
+<a href="https://wa.me/525553420821" class="fab">💬</a>
+
 </body>
 </html>

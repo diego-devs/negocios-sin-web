@@ -1,211 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corporación Automotriz LAM | Taller Mecánico en Azcapotzalco</title>
-  <meta name="description" content="Corporación Automotriz LAM — Taller mecánico profesional: servicio mayor y menor, frenos, suspensión, afinación y diagnóstico computarizado. Platanales 206, Azcapotzalco.">
-  <meta property="og:title" content="Corporación Automotriz LAM">
-  <meta property="og:description" content="Taller mecánico profesional de confianza en Azcapotzalco, CDMX.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../shared/base.css">
-  <style>
-    :root {
-      --color-primary: #C0392B;
-      --color-primary-dark: #1A1A2E;
-      --color-accent: #E74C3C;
-      --color-gold: #F39C12;
-      --color-overlay: rgba(26, 26, 46, 0.7);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporación Automotriz LAM — Taller Mecánico</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--carbon:#1a1a1a;--carbon-light:#252525;--red:#DC2626;--red-dark:#991b1b;--white:#f0f0f0;--gray:#888}
+body{font-family:'Rajdhani',sans-serif;background:var(--black);color:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+nav{position:fixed;top:0;width:100%;background:rgba(10,10,10,.95);backdrop-filter:blur(8px);z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--red)}
+nav .logo{font-size:1.5rem;font-weight:700;letter-spacing:4px;text-transform:uppercase}
+nav .logo span{color:var(--red)}
+nav ul{list-style:none;display:flex;gap:1.5rem}
+nav ul a{font-size:.95rem;font-weight:600;color:var(--gray);transition:color .3s;text-transform:uppercase;letter-spacing:1px}
+nav ul a:hover{color:var(--red)}
+@media(max-width:768px){nav ul{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 2rem 4rem;background:var(--black);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(220,38,38,.03) 40px,rgba(220,38,38,.03) 80px)}
+.hero-gear{font-size:10rem;opacity:.12;position:absolute;top:10%;right:5%;animation:spin 20s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:700;text-transform:uppercase;letter-spacing:5px;line-height:1.05}
+.hero h1 span{color:var(--red)}
+.hero .tagline{font-size:clamp(1rem,2.5vw,1.4rem);color:var(--gray);margin:1rem 0 2rem;font-weight:400;letter-spacing:2px}
+.btn{display:inline-block;padding:1rem 2.5rem;background:var(--red);color:var(--white);font-family:inherit;font-size:1.1rem;font-weight:700;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:2px;transition:all .3s;clip-path:polygon(0 0,100% 0,95% 100%,0 100%)}
+.btn:hover{background:#ef4444;transform:translateY(-2px);box-shadow:0 8px 25px rgba(220,38,38,.4)}
+
+/* SECTIONS */
+section{padding:5rem 2rem;position:relative}
+.section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:.3rem}
+.section-title span{color:var(--red)}
+.section-line{width:80px;height:4px;background:var(--red);margin:0 auto 3rem}
+
+/* SERVICES */
+.services{background:var(--carbon)}
+.services::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.01) 40px,rgba(255,255,255,.01) 80px)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.service-card{background:var(--black);border:1px solid rgba(220,38,38,.2);padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--red);transition:width .3s}
+.service-card:hover::after{width:100%}
+.service-card:hover{border-color:var(--red);transform:translateY(-4px)}
+.service-icon{font-size:2.5rem;margin-bottom:1rem}
+.service-card h3{color:var(--red);font-size:1.2rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem}
+.service-card p{color:var(--gray);font-size:.9rem}
+
+/* WHY US */
+.why{background:var(--black);text-align:center}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;max-width:800px;margin:0 auto}
+.stat-num{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;color:var(--red)}
+.stat-label{color:var(--gray);font-size:.9rem;text-transform:uppercase;letter-spacing:1px}
+
+/* CONTACT */
+.contact{background:var(--carbon);text-align:center}
+.contact-info{color:var(--gray);margin:1rem 0}
+.contact-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
+.btn-wa{background:#25D366;color:#fff;padding:.9rem 2rem;font-family:inherit;font-size:1rem;font-weight:700;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;text-transform:uppercase;letter-spacing:1px;transition:all .3s}
+.btn-wa:hover{opacity:.85}
+.btn-call{background:transparent;border:2px solid var(--red);color:var(--red);padding:.85rem 2rem;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;text-transform:uppercase;letter-spacing:1px;transition:all .3s}
+.btn-call:hover{background:var(--red);color:var(--white)}
+
+footer{background:var(--black);text-align:center;padding:2rem;color:rgba(255,255,255,.3);font-size:.85rem;border-top:2px solid var(--red)}
+
+.fab{position:fixed;bottom:2rem;right:2rem;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 15px rgba(0,0,0,.5);z-index:99;transition:transform .3s}
+.fab:hover{transform:scale(1.1)}
+</style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="navbar-brand">Automotriz <span>LAM</span></a>
-      <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+<nav>
+  <div class="logo">AUTOMOTRIZ <span>LAM</span></div>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-gear">⚙️</div>
+  <h1>CORPORACIÓN<br>AUTOMOTRIZ <span>LAM</span></h1>
+  <div class="tagline">Servicio mecánico profesional de confianza</div>
+  <a href="https://wa.me/525553567618?text=Hola%2C%20necesito%20un%20servicio%20para%20mi%20vehículo" class="btn">Solicitar Servicio</a>
+</section>
+
+<section class="services" id="servicios">
+  <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+  <div class="section-line"></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Diagnóstico Computarizado</h3>
+      <p>Escáner automotriz de última generación para detectar fallas con precisión.</p>
     </div>
-  </nav>
-
-  <section id="inicio" class="hero" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1400&q=80');">
-    <div class="hero-content">
-      <p class="tagline">Tu auto en las mejores manos</p>
-      <h1>Corporación Automotriz LAM</h1>
-      <p>Taller mecánico profesional con más de años de experiencia. Servicio de calidad y confianza en Azcapotzalco.</p>
-      <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-      <a href="https://wa.me/525553567618" class="btn btn-outline">Cotiza ahora</a>
+    <div class="service-card">
+      <div class="service-icon">🛑</div>
+      <h3>Frenos</h3>
+      <p>Revisión, ajuste y cambio de balatas, discos y sistema de frenado completo.</p>
     </div>
-  </section>
-
-  <section id="servicios" class="menu">
-    <div class="container">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      <p class="section-subtitle">Mantenimiento y reparación automotriz integral</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=400&q=80" alt="Servicio mayor y menor"></div>
-          <div class="menu-card-body">
-            <h4>Servicio Mayor y Menor</h4>
-            <p>Cambio de aceite, filtros, bujías y revisión completa de tu vehículo. Mantenimiento preventivo para alargar la vida de tu auto.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="Frenos"></div>
-          <div class="menu-card-body">
-            <h4>Frenos</h4>
-            <p>Revisión, ajuste y cambio de balatas, discos y tambores. Tu seguridad es nuestra prioridad número uno.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=400&q=80" alt="Suspensión"></div>
-          <div class="menu-card-body">
-            <h4>Suspensión</h4>
-            <p>Diagnóstico y reparación de amortiguadores, resortes, rotulas y bujes. Manejo suave y seguro garantizado.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&q=80" alt="Afinación"></div>
-          <div class="menu-card-body">
-            <h4>Afinación</h4>
-            <p>Afinación electrónica completa para mejorar el rendimiento y reducir el consumo de combustible de tu vehículo.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1507977443263-d843521706a4?w=400&q=80" alt="Diagnóstico computarizado"></div>
-          <div class="menu-card-body">
-            <h4>Diagnóstico Computarizado</h4>
-            <p>Escáner automotriz profesional para detectar fallas electrónicas y mecánicas con precisión. Todas las marcas.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&q=80" alt="Eléctrico automotriz"></div>
-          <div class="menu-card-body">
-            <h4>Eléctrico Automotriz</h4>
-            <p>Reparación de alternadores, marchas, instalación eléctrica, luces y sistemas de carga. Soluciones completas.</p>
-          </div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🔩</div>
+      <h3>Suspensión</h3>
+      <p>Amortiguadores, resortes, rotulas y todo el sistema de suspensión.</p>
     </div>
-  </section>
-
-  <section id="nosotros" class="about">
-    <div class="container">
-      <h2 class="section-title">Nuestro Taller</h2>
-      <p class="section-subtitle">Equipamiento profesional y técnicos certificados</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400&q=80" alt="Taller mecánico"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&q=80" alt="Herramientas"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80" alt="Reparación"></div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Motor</h3>
+      <p>Reparación mayor y menor de motor. Ajustes, empaques y más.</p>
     </div>
-  </section>
-
-  <section id="ubicacion" class="location">
-    <div class="container">
-      <h2 class="section-title">Encuéntranos</h2>
-      <p class="section-subtitle">Trae tu auto y nosotros nos encargamos</p>
-      <div class="divider"></div>
-      <div class="location-grid">
-        <div class="map-wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.5!2d-99.178!3d19.473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUGxhdGFuYWxlcyAyMDYsIE51ZXZhIFNhbnRhIE1hcsOtYQ!5e0!3m2!1ses!2smx!4v1700000000000" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="location-info">
-          <h3>¿Cómo llegar?</h3>
-          <div class="info-item">
-            <span class="icon">📍</span>
-            <div><strong>Dirección</strong><p>Platanales 206, Col. Nueva Santa María,<br>Azcapotzalco, CDMX, CP 02800</p></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">📞</span>
-            <div><strong>Teléfono</strong><a href="tel:+525553567618">(55) 5356 7618</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">💬</span>
-            <div><strong>WhatsApp</strong><a href="https://wa.me/525553567618">Envíanos mensaje</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">🕐</span>
-            <div>
-              <strong>Horario</strong>
-              <table class="schedule-table">
-                <tr><td>Lunes - Viernes</td><td>8:00 AM - 6:00 PM</td></tr>
-                <tr><td>Sábado</td><td>8:00 AM - 2:00 PM</td></tr>
-                <tr><td>Domingo</td><td>Cerrado</td></tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h3>Sistema Eléctrico</h3>
+      <p>Alternador, marcha, instalación eléctrica y diagnóstico de fallas.</p>
     </div>
-  </section>
-
-  <section id="contacto" class="contact-cta">
-    <div class="container">
-      <h2>¡Agenda tu servicio hoy!</h2>
-      <p>Cotizaciones sin compromiso. Escríbenos por WhatsApp y recibe atención inmediata.</p>
-      <a href="https://wa.me/525553567618?text=Hola%2C%20necesito%20una%20cotización%20para%20mi%20auto" class="btn btn-primary">Cotizar por WhatsApp</a>
+    <div class="service-card">
+      <div class="service-icon">🔄</div>
+      <h3>Afinaciones</h3>
+      <p>Afinación mayor y menor. Cambio de aceite, filtros y bujías.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Corporación Automotriz LAM</h4>
-          <p>Taller mecánico profesional de confianza en la colonia Nueva Santa María, Azcapotzalco.</p>
-        </div>
-        <div>
-          <h4>Menú</h4>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <p>📍 Platanales 206, Col. Nueva Santa María</p>
-          <p>📞 <a href="tel:+525553567618">(55) 5356 7618</a></p>
-          <p>💬 <a href="https://wa.me/525553567618">WhatsApp</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Corporación Automotriz LAM. Sitio creado por <a href="#">Tu Agencia Web</a>.</p>
-      </div>
-    </div>
-  </footer>
+<section class="why" id="nosotros">
+  <h2 class="section-title">¿Por qué <span>LAM</span>?</h2>
+  <div class="section-line"></div>
+  <div class="stats">
+    <div><div class="stat-num">20+</div><div class="stat-label">Años de experiencia</div></div>
+    <div><div class="stat-num">5000+</div><div class="stat-label">Vehículos atendidos</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Garantía en servicio</div></div>
+  </div>
+  <p style="color:var(--gray);margin-top:2rem;font-size:1rem">📍 Platanales 206, Nueva Santa María, CP 02800</p>
+</section>
 
-  <a href="https://wa.me/525553567618?text=Hola%2C%20quiero%20información" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+<section class="contact" id="contacto">
+  <h2 class="section-title"><span>Contacto</span></h2>
+  <div class="section-line"></div>
+  <p class="contact-info">Trae tu vehículo y recibe un diagnóstico sin compromiso</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/525553567618?text=Hola%2C%20necesito%20un%20servicio" class="btn-wa">📱 WhatsApp</a>
+    <a href="tel:+525553567618" class="btn-call">📞 (55) 5356 7618</a>
+  </div>
+</section>
 
-  <script>
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
+<footer>© 2025 Corporación Automotriz LAM. Todos los derechos reservados.</footer>
+
+<a href="https://wa.me/525553567618" class="fab">💬</a>
+
 </body>
 </html>
