@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demos — Sitios Web para Negocios Locales</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+  .header { padding: 3rem 1.5rem 2rem; text-align: center; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+  .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header p { color: #94a3b8; font-size: 1rem; }
+  .grid { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+  .card { background: #1e293b; border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid #334155; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+  .card-emoji { font-size: 2.5rem; padding: 1.5rem 1.5rem 0.5rem; }
+  .card-body { padding: 0 1.5rem 1.5rem; }
+  .card-body h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; color: #f1f5f9; }
+  .card-body .giro { font-size: 0.85rem; color: #38bdf8; font-weight: 600; margin-bottom: 0.5rem; }
+  .card-body .dir { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem; }
+  .card-body .style { font-size: 0.8rem; color: #c084fc; margin-bottom: 1rem; font-style: italic; }
+  .btn { display: inline-block; padding: 0.6rem 1.25rem; background: linear-gradient(90deg, #38bdf8, #818cf8); color: #0f172a; font-weight: 700; font-size: 0.85rem; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+  .btn:hover { opacity: 0.85; }
+  .section-title { max-width: 1200px; margin: 2.5rem auto 0.5rem; padding: 0 1.5rem; font-size: 1.1rem; color: #64748b; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+  .footer { text-align: center; padding: 3rem 1.5rem; color: #475569; font-size: 0.8rem; }
+  .badge { display: inline-block; padding: 0.2rem 0.5rem; background: #22c55e20; color: #4ade80; font-size: 0.7rem; font-weight: 600; border-radius: 4px; margin-left: 0.5rem; }
+  .badge.new { background: #f59e0b20; color: #fbbf24; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🌐 Demos — Negocios Locales</h1>
+  <p>Colonia Nueva Santa María, Azcapotzalco · 17 sitios web demo</p>
+</div>
+
+<div class="section-title">🆕 Nuevos (Marzo 2026)</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-emoji">🍕</div>
+    <div class="card-body">
+      <h2>Mardiz Pizza <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Pizzería</div>
+      <div class="dir">📍 Guanábana 119 · 30 años de experiencia</div>
+      <div class="style">Elegante oscuro, estilo italiano artesanal</div>
+      <a href="demo-mardiz/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🍺</div>
+    <div class="card-body">
+      <h2>El Minichelista <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Café / Bar</div>
+      <div class="dir">📍 Nueva Santa María · 9 reviews en Yelp</div>
+      <div class="style">Bohemio, vintage, ecléctico</div>
+      <a href="demo-minichelista/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🌮</div>
+    <div class="card-body">
+      <h2>Taquería Arandas <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Taquería</div>
+      <div class="dir">📍 Nueva Santa María · Tacos, gringas, alambres</div>
+      <div class="style">Neón nocturno, taquería auténtica</div>
+      <a href="demo-arandas/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🍖</div>
+    <div class="card-body">
+      <h2>Las Costillas D' Fuentes <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Restaurante</div>
+      <div class="dir">📍 Clavelinas 120 · +50 años de historia</div>
+      <div class="style">Rústico elegante, tradición familiar</div>
+      <a href="demo-costillas/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🎂</div>
+    <div class="card-body">
+      <h2>Pastelería Jardín <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Pastelería / Panadería</div>
+      <div class="dir">📍 Plan de San Luis 471</div>
+      <div class="style">Dulce, tonos pastel, delicado</div>
+      <a href="demo-jardin/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🍛</div>
+    <div class="card-body">
+      <h2>Varanasi <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Cocina India / Vegetariana</div>
+      <div class="dir">📍 Membrillo 170 · 5⭐ Yelp</div>
+      <div class="style">Exótico oriental, especias y elegancia</div>
+      <a href="demo-varanasi/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">☕</div>
+    <div class="card-body">
+      <h2>Señor Café <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Cafetería / Buffet</div>
+      <div class="dir">📍 Cocoteros 163</div>
+      <div class="style">Moderno, minimalista cálido</div>
+      <a href="demo-senorcafe/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🎉</div>
+    <div class="card-body">
+      <h2>Tacosdefiesta <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Tacos para Eventos</div>
+      <div class="dir">📍 Cocoteros 128 · Servicio para fiestas</div>
+      <div class="style">Festivo, papel picado, colorido mexicano</div>
+      <a href="demo-tacosdefiesta/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🍞</div>
+    <div class="card-body">
+      <h2>Panadería Queretana <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Panadería</div>
+      <div class="dir">📍 Romero de Terreros 616 · Tel: (55) 1107 7475</div>
+      <div class="style">Cálido artesanal, tonos trigo</div>
+      <a href="demo-queretana/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🚛</div>
+    <div class="card-body">
+      <h2>Grupo Mercurio <span class="badge new">NUEVO</span></h2>
+      <div class="giro">Transporte / Logística</div>
+      <div class="dir">📍 Piña 297 · Tel: (55) 5355 3606</div>
+      <div class="style">Corporativo azul, profesional</div>
+      <a href="demo-mercurio/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-title">✅ Anteriores</div>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-emoji">💅</div>
+    <div class="card-body">
+      <h2>Natural Lashes México</h2>
+      <div class="giro">Estética / Belleza</div>
+      <div class="dir">📍 Nueces 149 Local C</div>
+      <a href="demo-natural-lashes/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🔑</div>
+    <div class="card-body">
+      <h2>Cerrajería Tapia</h2>
+      <div class="giro">Cerrajería</div>
+      <div class="dir">📍 Nueces 168</div>
+      <a href="demo-tapia/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">☕</div>
+    <div class="card-body">
+      <h2>Cafetería De la O</h2>
+      <div class="giro">Cafetería</div>
+      <div class="dir">📍 Nueces 179</div>
+      <a href="demo-delao/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🦷</div>
+    <div class="card-body">
+      <h2>Dr. Cambre — Dentista</h2>
+      <div class="giro">Dentista</div>
+      <div class="dir">📍 Ave de los Maestros 538</div>
+      <a href="demo-cambre/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🦷</div>
+    <div class="card-body">
+      <h2>Dr. Sandoval — Dentista</h2>
+      <div class="giro">Dentista</div>
+      <div class="dir">📍 Clavelinas 208</div>
+      <a href="demo-sandoval/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">☕</div>
+    <div class="card-body">
+      <h2>Cafetería Cortes</h2>
+      <div class="giro">Cafetería</div>
+      <div class="dir">📍 Guanábana 154-1</div>
+      <a href="demo-cortes/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🔧</div>
+    <div class="card-body">
+      <h2>Corporación Automotriz LAM</h2>
+      <div class="giro">Taller Mecánico</div>
+      <div class="dir">📍 Platanales 206</div>
+      <a href="demo-lam/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">🦷</div>
+    <div class="card-body">
+      <h2>Concepto Odontológico</h2>
+      <div class="giro">Dentista</div>
+      <div class="dir">📍 Cairo 141, Del Recreo</div>
+      <a href="demo-concepto/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-emoji">☕</div>
+    <div class="card-body">
+      <h2>Café Inna Clavería</h2>
+      <div class="giro">Cafetería</div>
+      <div class="dir">📍 Clavería 129</div>
+      <a href="demo-inna/" class="btn">Ver Demo →</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Demos creadas por Diego Devs · Colonia Nueva Santa María, Azcapotzalco</p>
+</div>
+
+</body>
+</html>
