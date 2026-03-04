@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varanasi | Cocina India y Vegetariana en Azcapotzalco</title>
+<meta name="description" content="Varanasi — cocina india y vegetariana auténtica. 5 estrellas Yelp. Membrillo 170, Col. Nueva Santa María, Azcapotzalco, CDMX.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Raleway',sans-serif;color:#2d2a26;background:#FBF8F3;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --saffron:#D4792C;--curry:#C4A032;--deep-red:#8B2500;--earth:#5C4033;
+  --sage:#6B7B5E;--cream:#FBF8F3;--terracotta:#B85C38;--dark:#1C1713;
+  --sand:#E8DDD0;
+}
+
+/* ORNAMENTAL BORDER */
+.ornament{height:8px;background:repeating-linear-gradient(90deg,var(--saffron) 0 15px,var(--curry) 15px 30px,var(--deep-red) 30px 45px,var(--sage) 45px 60px)}
+
+/* NAV */
+nav{background:var(--dark);padding:.8rem 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--curry);letter-spacing:4px}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{color:rgba(255,255,255,.65);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:400;transition:.3s}
+.nav-links a:hover{color:var(--curry)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--curry)}
+
+/* HERO - exotic mandala inspired */
+.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;position:relative;
+  background:linear-gradient(180deg,var(--dark) 0%,#2a1f15 60%,var(--earth) 100%)}
+.hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;
+  border:1px solid rgba(196,160,50,.1);box-shadow:0 0 0 40px rgba(196,160,50,.03),0 0 0 80px rgba(196,160,50,.02),0 0 0 120px rgba(196,160,50,.01)}
+.hero-content{position:relative;z-index:2;max-width:650px}
+.hero .om{font-size:3rem;color:var(--curry);margin-bottom:1rem;opacity:.8}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(2.5rem,7vw,4rem);color:var(--cream);letter-spacing:6px;margin-bottom:.5rem}
+.hero .stars{color:var(--curry);font-size:1.2rem;margin-bottom:1rem}
+.hero .yelp{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem}
+.hero p{color:rgba(255,255,255,.6);font-size:1rem;margin-bottom:2.5rem;font-weight:300}
+.hero-line{width:80px;height:1px;background:var(--curry);margin:0 auto 1.5rem}
+
+.btn{display:inline-block;padding:.85rem 2.5rem;font-size:.8rem;font-weight:600;transition:.3s;cursor:pointer;text-transform:uppercase;letter-spacing:3px;border:none}
+.btn-saffron{background:var(--saffron);color:#fff;border-radius:2px}
+.btn-saffron:hover{background:#b8651e;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(196,160,50,.3);color:var(--curry);background:transparent;margin-left:1rem}
+.btn-ghost:hover{border-color:var(--curry);background:rgba(196,160,50,.1)}
+
+/* PHILOSOPHY */
+.philosophy{padding:5rem 2rem;background:var(--sand);text-align:center}
+.philosophy h2{font-family:'Cinzel',serif;font-size:1.8rem;color:var(--earth);margin-bottom:1rem}
+.philosophy p{max-width:650px;margin:0 auto 1rem;color:#6a5d50;font-size:.95rem;font-weight:300}
+.ornament-small{width:60px;height:3px;margin:.8rem auto 0;background:linear-gradient(90deg,var(--saffron),var(--curry),var(--sage))}
+
+/* MENU */
+.menu{padding:5rem 2rem;background:var(--dark);color:var(--cream)}
+.menu h2{font-family:'Cinzel',serif;font-size:1.8rem;text-align:center;color:var(--curry);letter-spacing:3px;margin-bottom:.5rem}
+.menu .sub{text-align:center;color:rgba(255,255,255,.4);font-size:.85rem;margin-bottom:3rem}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:900px;margin:auto}
+.menu-col h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--saffron);margin-bottom:1.5rem;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(196,160,50,.15);padding-bottom:.5rem}
+.dish{margin-bottom:1.5rem}
+.dish h4{font-size:.95rem;color:var(--cream);font-weight:500;margin-bottom:.2rem}
+.dish p{font-size:.8rem;color:rgba(255,255,255,.4);font-weight:300}
+.dish .v-tag{display:inline-block;font-size:.6rem;background:var(--sage);color:#fff;padding:.1rem .5rem;border-radius:2px;margin-left:.5rem;vertical-align:middle}
+
+/* AMBIENCE GALLERY */
+.ambience{padding:5rem 1.5rem;background:var(--cream)}
+.ambience h2{font-family:'Cinzel',serif;font-size:1.8rem;text-align:center;color:var(--earth);margin-bottom:2rem}
+.amb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:auto}
+.amb-item{height:220px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.8rem}
+.amb-item:nth-child(1){background:linear-gradient(135deg,var(--saffron),var(--terracotta));grid-column:span 2}
+.amb-item:nth-child(2){background:linear-gradient(135deg,var(--sage),var(--earth))}
+.amb-item:nth-child(3){background:linear-gradient(135deg,var(--curry),var(--saffron))}
+.amb-item:nth-child(4){background:linear-gradient(135deg,var(--earth),var(--dark));grid-column:span 2}
+
+/* REVIEWS */
+.reviews{padding:4rem 2rem;background:var(--sand);text-align:center}
+.reviews h2{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--earth);margin-bottom:2rem}
+.review-row{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;max-width:900px;margin:auto}
+.review{background:#fff;padding:1.5rem;flex:1;min-width:250px;max-width:350px;text-align:left;border-top:3px solid var(--curry)}
+.review .stars{color:var(--curry);margin-bottom:.5rem}
+.review p{font-size:.85rem;color:#777;font-style:italic}
+.review .source{font-size:.7rem;color:#bbb;margin-top:.5rem}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;background:var(--dark);color:var(--cream);text-align:center}
+.contact h2{font-family:'Cinzel',serif;font-size:1.8rem;color:var(--curry);margin-bottom:2rem}
+.c-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:700px;margin:auto}
+.c-item{flex:1;min-width:200px;padding:1.5rem;background:rgba(255,255,255,.04);border-radius:4px}
+.c-item .icon{font-size:1.5rem;margin-bottom:.5rem}
+.c-item h4{font-size:.85rem;color:var(--curry);margin-bottom:.3rem}
+.c-item p{font-size:.8rem;color:rgba(255,255,255,.4)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.3);text-align:center;padding:1.5rem;font-size:.75rem;border-top:1px solid rgba(196,160,50,.1)}
+
+@media(max-width:768px){
+  .menu-cols{grid-template-columns:1fr}
+  .amb-grid{grid-template-columns:1fr}
+  .amb-item:nth-child(1),.amb-item:nth-child(4){grid-column:auto}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--dark);padding:1rem 2rem;gap:.8rem}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-ghost{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="ornament"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">VARANASI</a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#filosofia">Filosofía</a>
+      <a href="#menu">Menú</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <div class="om">🙏</div>
+    <h1>VARANASI</h1>
+    <div class="hero-line"></div>
+    <div class="stars">★★★★★</div>
+    <p class="yelp">5 estrellas en Yelp</p>
+    <p>Cocina india auténtica y vegetariana en el corazón de Nueva Santa María. Sabores ancestrales, especias reales, experiencia única.</p>
+    <a href="#menu" class="btn btn-saffron">Ver Menú</a>
+    <a href="#contacto" class="btn btn-ghost">Reservar</a>
+  </div>
+</section>
+
+<section id="filosofia" class="philosophy">
+  <h2>Nuestra Filosofía</h2>
+  <div class="ornament-small"></div>
+  <br>
+  <p>En Varanasi creemos que la comida es medicina y celebración. Cada platillo está preparado con especias importadas de la India, técnicas tradicionales y un profundo respeto por los ingredientes vegetarianos.</p>
+  <p>Nuestro nombre honra a la ciudad sagrada de Varanasi, donde la espiritualidad y la gastronomía se entrelazan en cada rincón.</p>
+</section>
+
+<section id="menu" class="menu">
+  <h2>MENÚ</h2>
+  <div class="ornament-small" style="margin-bottom:1rem"></div>
+  <p class="sub">Cocina india auténtica · opciones vegetarianas y veganas</p>
+  <div class="menu-cols">
+    <div class="menu-col">
+      <h3>Platillos Principales</h3>
+      <div class="dish"><h4>Butter Chicken<span class="v-tag" style="background:var(--terracotta)">NO VEG</span></h4><p>Pollo en salsa cremosa de tomate, mantequilla y especias garam masala.</p></div>
+      <div class="dish"><h4>Palak Paneer <span class="v-tag">VEG</span></h4><p>Queso paneer en salsa de espinacas con comino y garam masala.</p></div>
+      <div class="dish"><h4>Chana Masala <span class="v-tag">VEG</span></h4><p>Garbanzos en salsa especiada de tomate y cilantro. Reconfortante.</p></div>
+      <div class="dish"><h4>Dal Tadka <span class="v-tag">VEG</span></h4><p>Lentejas amarillas con tempering de comino, ajo y chile seco.</p></div>
+    </div>
+    <div class="menu-col">
+      <h3>Acompañamientos</h3>
+      <div class="dish"><h4>Naan <span class="v-tag">VEG</span></h4><p>Pan plano horneado en tandoor. Natural, con ajo o con queso.</p></div>
+      <div class="dish"><h4>Biryani <span class="v-tag">VEG</span></h4><p>Arroz basmati aromático con verduras y especias enteras.</p></div>
+      <div class="dish"><h4>Samosas <span class="v-tag">VEG</span></h4><p>Empanadas crujientes rellenas de papa y chícharos especiados.</p></div>
+      <div class="dish"><h4>Raita <span class="v-tag">VEG</span></h4><p>Yogurt fresco con pepino, menta y comino tostado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ambience">
+  <h2>El Espacio</h2>
+  <div class="amb-grid">
+    <!-- FOTOS: Reemplazar con fotos reales -->
+    <div class="amb-item">📸 Interior del restaurante</div>
+    <div class="amb-item">📸 Platillos</div>
+    <div class="amb-item">📸 Especias</div>
+    <div class="amb-item">📸 Decoración</div>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="review-row">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"La mejor comida india que he probado en CDMX. Auténtica, deliciosa y con opciones vegetarianas increíbles."</p>
+      <div class="source">— Yelp</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Un lugar mágico. Las especias, el ambiente, todo te transporta a la India sin salir de Azcapotzalco."</p>
+      <div class="source">— Yelp</div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Visítanos</h2>
+  <div class="c-grid">
+    <div class="c-item">
+      <div class="icon">📍</div>
+      <h4>Dirección</h4>
+      <p>Membrillo 170, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="c-item">
+      <div class="icon">⭐</div>
+      <h4>Calificación</h4>
+      <p>5 estrellas en Yelp</p>
+    </div>
+    <div class="c-item">
+      <div class="icon">🍽️</div>
+      <h4>Tipo</h4>
+      <p>Cocina india · Vegetariana · Vegana</p>
+    </div>
+  </div>
+</section>
+<div class="ornament"></div>
+
+<footer>
+  <p>Varanasi — Membrillo 170, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p>© 2025 Varanasi. Namaste 🙏</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

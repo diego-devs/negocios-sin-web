@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Minichelista | Bar Bohemio en Nueva Santa María</title>
+<meta name="description" content="El Minichelista — café/bar con ambiente bohemio y ecléctico en Col. Nueva Santa María, Azcapotzalco, CDMX.">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',sans-serif;color:#2a2a2a;background:#F7F3ED;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --mustard:#D4A533;--teal:#2D6A6A;--burgundy:#8B2252;--paper:#F7F3ED;
+  --ink:#1a1a1a;--sage:#8FA68A;--rust:#C45D3E;--old-white:#EDE8DF;
+}
+
+/* NAV - vintage bar style */
+nav{background:var(--ink);padding:.7rem 1.5rem;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--mustard)}
+.nav-inner{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Abril Fatface',cursive;font-size:1.4rem;color:var(--mustard)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:400;transition:.3s}
+.nav-links a:hover{color:var(--mustard)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--mustard)}
+
+/* HERO - collage/vintage poster */
+.hero{min-height:90vh;display:flex;align-items:center;padding:3rem 2rem;
+  background:var(--ink);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;opacity:.06;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.1) 2px,rgba(255,255,255,.1) 4px)}
+.hero-layout{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.hero-text h1{font-family:'Abril Fatface',cursive;font-size:clamp(2.5rem,6vw,4rem);color:var(--paper);line-height:1.1;margin-bottom:1rem}
+.hero-text h1 span{color:var(--mustard);display:block;font-size:.6em}
+.hero-text p{color:rgba(255,255,255,.6);font-size:1rem;margin-bottom:2rem;font-weight:300}
+.hero-collage{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.collage-item{border-radius:8px;height:160px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.8rem;font-weight:500}
+.collage-item:nth-child(1){background:linear-gradient(135deg,var(--teal),#1d4a4a);grid-row:span 2;height:100%}
+.collage-item:nth-child(2){background:linear-gradient(135deg,var(--burgundy),#5a1535)}
+.collage-item:nth-child(3){background:linear-gradient(135deg,var(--mustard),var(--rust))}
+
+.btn{display:inline-block;padding:.8rem 2rem;font-size:.85rem;font-weight:500;transition:.3s;cursor:pointer;border:none;text-transform:uppercase;letter-spacing:1px}
+.btn-mustard{background:var(--mustard);color:var(--ink);border-radius:0}
+.btn-mustard:hover{background:#c4951d}
+.btn-teal{border:1px solid var(--teal);color:var(--teal);background:transparent;border-radius:0;margin-left:.8rem}
+.btn-teal:hover{background:var(--teal);color:#fff}
+
+/* VIBES SECTION */
+.vibes{padding:5rem 2rem;text-align:center}
+.vibes h2{font-family:'Abril Fatface',cursive;font-size:2rem;color:var(--ink);margin-bottom:.5rem}
+.vibes .sub{color:#888;font-size:.9rem;margin-bottom:3rem}
+.vibes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;max-width:900px;margin:auto}
+.vibe{padding:2rem 1.5rem;border:2px solid var(--old-white);transition:.3s;position:relative}
+.vibe:hover{border-color:var(--mustard);transform:translateY(-4px)}
+.vibe-emoji{font-size:2.5rem;margin-bottom:1rem}
+.vibe h3{font-family:'Abril Fatface',cursive;font-size:1.1rem;color:var(--ink);margin-bottom:.3rem}
+.vibe p{color:#777;font-size:.85rem}
+
+/* DRINKS MARQUEE */
+.marquee-section{background:var(--teal);padding:1.2rem 0;overflow:hidden;white-space:nowrap}
+.marquee{display:inline-block;animation:scroll 25s linear infinite}
+.marquee span{font-family:'Abril Fatface',cursive;font-size:1.3rem;color:rgba(255,255,255,.8);margin:0 3rem}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* GALLERY */
+.gallery{padding:5rem 2rem;background:var(--ink)}
+.gallery h2{font-family:'Abril Fatface',cursive;font-size:2rem;color:var(--paper);text-align:center;margin-bottom:2rem}
+.gallery-masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:auto}
+.g-item{border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.8rem;min-height:180px}
+.g-item:nth-child(1){background:linear-gradient(var(--burgundy),#6a1a40);grid-row:span 2;min-height:100%}
+.g-item:nth-child(2){background:linear-gradient(var(--rust),#a04830)}
+.g-item:nth-child(3){background:linear-gradient(var(--sage),#6a8a66)}
+.g-item:nth-child(4){background:linear-gradient(var(--mustard),#b08520)}
+.g-item:nth-child(5){background:linear-gradient(var(--teal),#1d4a4a)}
+
+/* REVIEWS */
+.reviews{padding:5rem 2rem;background:var(--old-white);text-align:center}
+.reviews h2{font-family:'Abril Fatface',cursive;font-size:2rem;color:var(--ink);margin-bottom:2rem}
+.review-cards{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;max-width:900px;margin:auto}
+.review{background:#fff;padding:1.5rem;border-left:4px solid var(--mustard);text-align:left;flex:1;min-width:250px;max-width:350px}
+.review p{font-size:.9rem;color:#555;font-style:italic;margin-bottom:.5rem}
+.review .stars{color:var(--mustard);font-size:1rem}
+.review .author{font-size:.8rem;color:#999;margin-top:.5rem}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;text-align:center}
+.contact h2{font-family:'Abril Fatface',cursive;font-size:2rem;color:var(--ink);margin-bottom:2rem}
+.contact-row{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:700px;margin:auto}
+.ct{flex:1;min-width:200px;padding:1.5rem;background:var(--old-white);border-radius:4px}
+.ct .icon{font-size:1.5rem;margin-bottom:.5rem}
+.ct h4{font-size:.85rem;color:var(--ink)}
+.ct p{font-size:.8rem;color:#777}
+
+footer{background:var(--ink);color:rgba(255,255,255,.4);text-align:center;padding:2rem;font-size:.8rem;border-top:2px solid var(--mustard)}
+footer .brand{font-family:'Abril Fatface',cursive;font-size:1.1rem;color:var(--mustard);margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .hero-layout{grid-template-columns:1fr}
+  .hero-collage{grid-template-columns:1fr 1fr}
+  .collage-item:nth-child(1){grid-row:auto;height:160px}
+  .gallery-masonry{grid-template-columns:1fr 1fr}
+  .g-item:nth-child(1){grid-row:auto}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--ink);padding:1rem 1.5rem;gap:.8rem}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-teal{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">El Minichelista</a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#vibes">Vibes</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-layout">
+    <div class="hero-text">
+      <h1>El Minichelista <span>café · bar · vibes</span></h1>
+      <p>Un rincón bohemio donde cada mesa tiene su propia historia. Micheladas artesanales, café de especialidad y la mejor vibra de Nueva Santa María.</p>
+      <div>
+        <a href="#vibes" class="btn btn-mustard">Descubre el lugar</a>
+        <a href="#contacto" class="btn btn-teal">Visítanos</a>
+      </div>
+    </div>
+    <!-- FOTOS: Reemplazar con fotos reales del bar -->
+    <div class="hero-collage">
+      <div class="collage-item">📸 Interior del bar</div>
+      <div class="collage-item">📸 Micheladas</div>
+      <div class="collage-item">📸 Ambiente</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee">
+    <span>☕ Café</span><span>🍺 Micheladas</span><span>🎵 Música en vivo</span><span>🎨 Arte local</span><span>🌮 Botana</span><span>📚 Libros</span>
+    <span>☕ Café</span><span>🍺 Micheladas</span><span>🎵 Música en vivo</span><span>🎨 Arte local</span><span>🌮 Botana</span><span>📚 Libros</span>
+  </div>
+</div>
+
+<section id="vibes" class="vibes">
+  <h2>Las Vibes</h2>
+  <p class="sub">Lo que nos hace únicos</p>
+  <div class="vibes-grid">
+    <div class="vibe">
+      <div class="vibe-emoji">🍺</div>
+      <h3>Micheladas</h3>
+      <p>Nuestras micheladas artesanales son legendarias. Receta secreta de la casa.</p>
+    </div>
+    <div class="vibe">
+      <div class="vibe-emoji">🪑</div>
+      <h3>Mesas Eclécticas</h3>
+      <p>Cada mesa es diferente. Vintage, reciclado, colorido. Como tú.</p>
+    </div>
+    <div class="vibe">
+      <div class="vibe-emoji">🎶</div>
+      <h3>Soundtrack</h3>
+      <p>De rock indie a cumbia. La playlist perfecta para cada momento.</p>
+    </div>
+    <div class="vibe">
+      <div class="vibe-emoji">🌿</div>
+      <h3>Ambiente</h3>
+      <p>Bohemio, relajado, auténtico. Tu segundo hogar en la colonia.</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="gallery">
+  <h2>El Espacio</h2>
+  <div class="gallery-masonry">
+    <!-- FOTOS: Reemplazar con fotos reales -->
+    <div class="g-item">📸 Barra</div>
+    <div class="g-item">📸 Terraza</div>
+    <div class="g-item">📸 Decoración</div>
+    <div class="g-item">📸 Bebidas</div>
+    <div class="g-item">📸 Clientes</div>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>Lo que dicen</h2>
+  <div class="review-cards">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"El mejor lugar para relajarte después del trabajo. Las micheladas son increíbles."</p>
+      <div class="author">— Reseña en Yelp</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Ambiente súper padre, mesas únicas y muy buena atención. Siempre regreso."</p>
+      <div class="author">— Reseña en Yelp</div>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Un tesoro escondido en la colonia. Perfecto para una tarde de chill."</p>
+      <div class="author">— Reseña en Yelp</div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Encuéntranos</h2>
+  <div class="contact-row">
+    <div class="ct">
+      <div class="icon">📍</div>
+      <h4>Ubicación</h4>
+      <p>Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="ct">
+      <div class="icon">⭐</div>
+      <h4>Reseñas</h4>
+      <p>9 reseñas en Yelp — ¡Búscanos!</p>
+    </div>
+    <div class="ct">
+      <div class="icon">🕐</div>
+      <h4>Horario</h4>
+      <p>Consultar en redes sociales</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">El Minichelista</div>
+  <p>Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p style="margin-top:.5rem">© 2025 El Minichelista. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

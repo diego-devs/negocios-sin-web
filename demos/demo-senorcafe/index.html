@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Señor Café | Cafetería y Buffet en Azcapotzalco</title>
+<meta name="description" content="Señor Café — cafetería y buffet. Cocoteros 163, Col. Nueva Santa María, Azcapotzalco, CDMX.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#FAFAF8;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --coffee:#6F4E37;--latte:#D4B896;--foam:#F5F0E8;--espresso:#2C1A0E;
+  --caramel:#C08552;--milk:#FAFAF8;--accent:#E8A87C;
+}
+
+/* NAV - clean minimal */
+nav{background:var(--milk);padding:.8rem 2rem;position:sticky;top:0;z-index:100;border-bottom:1px solid #eee}
+.nav-inner{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--espresso)}
+.logo .sr{color:var(--coffee)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{color:#666;font-size:.85rem;font-weight:500;transition:.3s}
+.nav-links a:hover{color:var(--coffee)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:22px;height:2px;background:var(--espresso)}
+
+/* HERO - modern minimal with big typography */
+.hero{min-height:85vh;display:flex;align-items:center;padding:4rem 2rem;background:var(--foam)}
+.hero-inner{max-width:1000px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center;width:100%}
+.hero-text .pill{display:inline-block;background:var(--latte);color:var(--espresso);padding:.3rem 1rem;border-radius:20px;font-size:.75rem;font-weight:600;margin-bottom:1.5rem}
+.hero-text h1{font-family:'Sora',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);color:var(--espresso);line-height:1.15;margin-bottom:1rem}
+.hero-text h1 span{color:var(--caramel)}
+.hero-text p{color:#888;font-size:1rem;margin-bottom:2rem;max-width:420px;font-weight:300}
+.hero-img{aspect-ratio:4/5;border-radius:200px 200px 20px 20px;display:flex;align-items:center;justify-content:center;font-size:5rem;
+  background:linear-gradient(180deg,var(--latte),var(--coffee));position:relative}
+.hero-img::after{content:'📸 Foto del café';position:absolute;bottom:2rem;font-size:.8rem;color:rgba(255,255,255,.5)}
+
+.btn{display:inline-block;padding:.8rem 2rem;border-radius:10px;font-weight:600;font-size:.9rem;transition:.3s;cursor:pointer;border:none}
+.btn-coffee{background:var(--coffee);color:#fff}
+.btn-coffee:hover{background:var(--espresso);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--coffee);border:1px solid #ddd;margin-left:.8rem}
+.btn-light:hover{border-color:var(--coffee)}
+
+/* FEATURES */
+.features{padding:5rem 1.5rem;background:var(--milk)}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:auto;text-align:center}
+.feat{padding:2rem 1rem}
+.feat-icon{width:60px;height:60px;border-radius:16px;background:var(--foam);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1rem}
+.feat h3{font-family:'Sora',sans-serif;font-size:.95rem;color:var(--espresso);margin-bottom:.3rem}
+.feat p{font-size:.8rem;color:#999}
+
+/* MENU */
+.menu-section{padding:5rem 2rem;background:var(--foam)}
+.section-header{text-align:center;max-width:500px;margin:0 auto 3rem}
+.section-header h2{font-family:'Sora',sans-serif;font-size:1.8rem;color:var(--espresso)}
+.section-header p{color:#999;font-size:.9rem;margin-top:.3rem}
+.menu-tabs{display:flex;justify-content:center;gap:1rem;margin-bottom:2rem}
+.tab{padding:.5rem 1.5rem;border-radius:20px;font-size:.8rem;font-weight:600;cursor:pointer;transition:.3s;background:var(--milk);color:#666;border:1px solid #eee}
+.tab.active,.tab:hover{background:var(--coffee);color:#fff;border-color:var(--coffee)}
+.menu-list{max-width:700px;margin:auto}
+.menu-item{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 0;border-bottom:1px solid #eee}
+.menu-item h4{font-size:.95rem;color:var(--espresso)}
+.menu-item p{font-size:.8rem;color:#999;margin-top:.2rem}
+
+/* GALLERY */
+.gallery{padding:5rem 1.5rem;background:var(--milk)}
+.gallery h2{font-family:'Sora',sans-serif;font-size:1.8rem;text-align:center;color:var(--espresso);margin-bottom:2rem}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:auto}
+.g-item{aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.8rem}
+.g-item:nth-child(1){background:linear-gradient(135deg,var(--coffee),var(--espresso))}
+.g-item:nth-child(2){background:linear-gradient(135deg,var(--caramel),var(--latte))}
+.g-item:nth-child(3){background:linear-gradient(135deg,var(--accent),var(--caramel))}
+.g-item:nth-child(4){background:linear-gradient(135deg,var(--latte),var(--coffee))}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;background:var(--espresso);color:#fff;text-align:center}
+.contact h2{font-family:'Sora',sans-serif;font-size:1.8rem;color:var(--latte);margin-bottom:2rem}
+.c-flex{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:800px;margin:auto}
+.c-card{flex:1;min-width:200px;background:rgba(255,255,255,.05);padding:1.5rem;border-radius:12px}
+.c-card .icon{font-size:1.5rem;margin-bottom:.5rem}
+.c-card h4{font-size:.85rem;color:var(--latte);margin-bottom:.3rem}
+.c-card p{font-size:.8rem;color:rgba(255,255,255,.4)}
+
+footer{background:var(--espresso);color:rgba(255,255,255,.3);text-align:center;padding:1.5rem;font-size:.75rem;border-top:1px solid rgba(255,255,255,.05)}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-img{max-width:300px;margin:auto}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .g-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--milk);padding:1rem 2rem;gap:.8rem;box-shadow:0 4px 15px rgba(0,0,0,.05)}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-light{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="sr">Señor</span> Café ☕</a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="pill">☕ Cafetería & Buffet</div>
+      <h1>Tu café favorito en <span>Nueva Santa María</span></h1>
+      <p>Señor Café — donde el buen café se encuentra con la comida reconfortante. Buffet diario, bebidas de especialidad y un espacio para disfrutar.</p>
+      <div>
+        <a href="#menu" class="btn btn-coffee">Ver Menú</a>
+        <a href="#contacto" class="btn btn-light">Ubicación</a>
+      </div>
+    </div>
+    <!-- FOTO: Reemplazar con foto real -->
+    <div class="hero-img">☕</div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feat-grid">
+    <div class="feat">
+      <div class="feat-icon">☕</div>
+      <h3>Café de Especialidad</h3>
+      <p>Granos selectos tostados con cuidado.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🍽️</div>
+      <h3>Buffet Diario</h3>
+      <p>Variedad de platillos caseros cada día.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🥐</div>
+      <h3>Panadería</h3>
+      <p>Pan dulce y salado recién horneado.</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🪑</div>
+      <h3>Espacio Cómodo</h3>
+      <p>Ideal para trabajar o platicar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu-section">
+  <div class="section-header">
+    <h2>Nuestro Menú</h2>
+    <p>Algo para cada momento del día</p>
+  </div>
+  <div class="menu-tabs">
+    <div class="tab active">Café</div>
+    <div class="tab">Buffet</div>
+    <div class="tab">Postres</div>
+  </div>
+  <div class="menu-list">
+    <div class="menu-item">
+      <div><h4>Americano</h4><p>Espresso con agua caliente. Clásico e intenso.</p></div>
+    </div>
+    <div class="menu-item">
+      <div><h4>Cappuccino</h4><p>Espresso, leche vaporizada y espuma cremosa.</p></div>
+    </div>
+    <div class="menu-item">
+      <div><h4>Latte</h4><p>Suave y cremoso. Con opción de vainilla o caramelo.</p></div>
+    </div>
+    <div class="menu-item">
+      <div><h4>Café de Olla</h4><p>Tradicional mexicano con piloncillo y canela.</p></div>
+    </div>
+    <div class="menu-item">
+      <div><h4>Buffet del Día</h4><p>Platillo fuerte, guarnición, agua y postre. Cambia diario.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="gallery">
+  <h2>El Espacio</h2>
+  <div class="g-grid">
+    <!-- FOTOS: Reemplazar con fotos reales -->
+    <div class="g-item">📸 Interior</div>
+    <div class="g-item">📸 Café</div>
+    <div class="g-item">📸 Buffet</div>
+    <div class="g-item">📸 Fachada</div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Encuéntranos</h2>
+  <div class="c-flex">
+    <div class="c-card">
+      <div class="icon">📍</div>
+      <h4>Dirección</h4>
+      <p>Cocoteros 163, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="c-card">
+      <div class="icon">🕐</div>
+      <h4>Horario</h4>
+      <p>Lunes a Sábado<br>Desayuno y comida</p>
+    </div>
+    <div class="c-card">
+      <div class="icon">🏪</div>
+      <h4>Cadena Local</h4>
+      <p>Parte de la familia Señor Café</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Señor Café — Cocoteros 163, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p>© 2025 Señor Café. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

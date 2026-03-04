@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mardiz Pizza | Pizza Artesanal en Azcapotzalco — 30 Años de Sabor</title>
+<meta name="description" content="Mardiz Pizza — pizzería artesanal con 30 años de experiencia. Chef Tania Mijares. Guanábana 119, Col. Nueva Santa María, Azcapotzalco.">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;color:#2c2c2c;background:#FFFBF5;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --red:#C62828;--red-dark:#8E0000;--gold:#D4A04A;--cream:#FFFBF5;
+  --charcoal:#1C1C1C;--olive:#4A5623;--warm-gray:#F5F0E8;
+}
+
+/* NAV - elegant dark */
+nav{background:var(--charcoal);padding:.9rem 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Italiana',serif;font-size:1.8rem;color:#fff;letter-spacing:2px}
+.logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{color:rgba(255,255,255,.75);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:500;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--gold)}
+
+/* HERO - fullscreen with overlay */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;
+  background:linear-gradient(160deg,var(--charcoal),#2d1a0e,var(--red-dark))}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A04A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-content{position:relative;z-index:2;max-width:650px}
+.hero-content .chef-tag{font-size:.8rem;text-transform:uppercase;letter-spacing:5px;color:var(--gold);margin-bottom:1rem}
+.hero h1{font-family:'Italiana',serif;font-size:clamp(3rem,8vw,5rem);color:#fff;line-height:1.1;margin-bottom:.5rem}
+.hero .years{font-size:1rem;color:var(--gold);margin-bottom:1.5rem;font-weight:300}
+.hero p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:2.5rem}
+.hero-divider{width:80px;height:1px;background:var(--gold);margin:0 auto 1.5rem}
+
+.btn{display:inline-block;padding:.9rem 2.5rem;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;transition:.3s;border:none;cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--charcoal)}
+.btn-gold:hover{background:#c4912e}
+.btn-outline{border:1px solid rgba(255,255,255,.3);color:#fff;margin-left:1rem}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* STORY */
+.story{padding:5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1050px;margin:auto;align-items:center}
+.story-img{height:400px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;
+  background:linear-gradient(135deg,var(--red),var(--red-dark))}
+.story-img::after{content:'📸 Foto de Chef Tania';position:absolute;bottom:1rem;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Montserrat',sans-serif}
+.story-text .label{font-size:.75rem;text-transform:uppercase;letter-spacing:4px;color:var(--gold);margin-bottom:.5rem}
+.story-text h2{font-family:'Italiana',serif;font-size:2.2rem;color:var(--charcoal);margin-bottom:1rem}
+.story-text p{color:#555;font-size:.95rem;margin-bottom:1rem}
+.story-text blockquote{border-left:3px solid var(--gold);padding-left:1rem;color:var(--red);font-style:italic;font-size:.95rem;margin-top:1.5rem}
+
+/* MENU */
+.menu{padding:5rem 2rem;background:var(--charcoal);color:#fff;text-align:center}
+.menu h2{font-family:'Italiana',serif;font-size:2.2rem;margin-bottom:.5rem}
+.menu .sub{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:3rem}
+.gold-line{width:60px;height:1px;background:var(--gold);margin:.8rem auto 0}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1000px;margin:auto}
+.menu-item{border:1px solid rgba(255,255,255,.1);padding:2rem;border-radius:4px;text-align:left;transition:.3s}
+.menu-item:hover{border-color:var(--gold);background:rgba(212,160,74,.05)}
+.menu-item h3{font-family:'Italiana',serif;font-size:1.3rem;color:var(--gold);margin-bottom:.3rem}
+.menu-item p{font-size:.85rem;color:rgba(255,255,255,.5)}
+.menu-item .price{font-size:1.1rem;color:var(--gold);font-weight:600;margin-top:.8rem}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;background:var(--warm-gray);text-align:center}
+.contact h2{font-family:'Italiana',serif;font-size:2rem;color:var(--charcoal);margin-bottom:2rem}
+.contact-flex{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:800px;margin:auto}
+.c-card{background:#fff;padding:1.5rem 2rem;border-radius:4px;min-width:200px;flex:1;border-top:3px solid var(--gold)}
+.c-card .icon{font-size:1.5rem;margin-bottom:.5rem}
+.c-card h4{font-size:.9rem;color:var(--charcoal);margin-bottom:.3rem}
+.c-card p,.c-card a{font-size:.85rem;color:#666}
+.c-card a:hover{color:var(--red)}
+
+footer{background:var(--charcoal);color:rgba(255,255,255,.4);text-align:center;padding:2rem;font-size:.8rem;border-top:1px solid rgba(255,255,255,.08)}
+footer .brand{font-family:'Italiana',serif;font-size:1.2rem;color:var(--gold);margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .story{grid-template-columns:1fr;gap:2rem}
+  .story-img{height:250px}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--charcoal);padding:1rem 2rem;gap:1rem}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-outline{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Mard<em>iz</em></a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#historia">Historia</a>
+      <a href="#menu">Menú</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <p class="chef-tag">Pizzería Artesanal desde 1994</p>
+    <h1>Mardiz Pizza</h1>
+    <div class="hero-divider"></div>
+    <p class="years">30 años creando la pizza perfecta</p>
+    <p>Masa hecha a mano, ingredientes selectos y el toque único de la Chef Tania Mijares. En el corazón de Nueva Santa María.</p>
+    <a href="#menu" class="btn btn-gold">Ver Menú</a>
+    <a href="#contacto" class="btn btn-outline">Contacto</a>
+  </div>
+</section>
+
+<section id="historia" class="story">
+  <!-- FOTO: Reemplazar con foto real -->
+  <div class="story-img">👩‍🍳</div>
+  <div class="story-text">
+    <p class="label">Nuestra Historia</p>
+    <h2>Tres décadas de pasión por la pizza</h2>
+    <p>Desde 1994, Mardiz Pizza ha sido el lugar favorito del barrio para disfrutar pizza artesanal. Bajo la dirección de la Chef Tania Mijares, cada pizza es una obra de arte con sabores que fusionan la tradición italiana con ingredientes mexicanos.</p>
+    <p>Lo que empezó como un sueño familiar se ha convertido en un referente gastronómico de la colonia Nueva Santa María.</p>
+    <blockquote>"La pizza perfecta necesita tiempo, buenos ingredientes y mucho amor." — Chef Tania Mijares</blockquote>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <h2>Nuestras Pizzas</h2>
+  <div class="gold-line"></div>
+  <p class="sub">Masa artesanal horneada en piedra</p>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <h3>Margherita</h3>
+      <p>Salsa pomodoro, mozzarella fresca, albahaca y aceite de oliva extra virgen.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Mardiz Especial</h3>
+      <p>Nuestra receta secreta con 30 años de historia. Ingredientes premium y sabor inigualable.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Mexicana</h3>
+      <p>Chorizo artesanal, jalapeño, cebolla morada y queso Oaxaca fundido.</p>
+    </div>
+    <div class="menu-item">
+      <h3>4 Quesos</h3>
+      <p>Mozzarella, parmesano, gorgonzola y queso de cabra. Para los amantes del queso.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Pepperoni Clásica</h3>
+      <p>Pepperoni importado con queso mozzarella gratinado. Sencilla y perfecta.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Vegetariana</h3>
+      <p>Pimientos, champiñones, aceitunas, tomate cherry y espinaca fresca.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Visítanos</h2>
+  <div class="contact-flex">
+    <div class="c-card">
+      <div class="icon">📍</div>
+      <h4>Dirección</h4>
+      <p>Guanábana 119, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="c-card">
+      <div class="icon">🕐</div>
+      <h4>Horario</h4>
+      <p>Mar - Dom: 13:00 - 22:00</p>
+    </div>
+    <div class="c-card">
+      <div class="icon">🍕</div>
+      <h4>Pedidos</h4>
+      <p>Servicio a domicilio disponible en la zona</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Mardiz Pizza</div>
+  <p>Guanábana 119, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p style="margin-top:.5rem">© 2025 Mardiz Pizza — Chef Tania Mijares. 30 años de tradición.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

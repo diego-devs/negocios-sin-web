@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Costillas D' Fuentes | +50 Años de Tradición en Azcapotzalco</title>
+<meta name="description" content="Las Costillas D' Fuentes — más de 50 años de cocina mexicana tradicional. Clavelinas 120, Col. Nueva Santa María, Azcapotzalco.">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',sans-serif;color:#3a2a1a;background:#FAF6F0;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --maroon:#6B1D1D;--wood:#8B6240;--gold:#BFA14A;--cream:#FAF6F0;
+  --paper:#F0E8DA;--charcoal:#2C2018;--brick:#A0522D;
+}
+
+/* NAV */
+nav{background:var(--charcoal);padding:.9rem 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'EB Garamond',serif;font-size:1.4rem;color:var(--gold);font-weight:600}
+.logo span{color:#fff;font-weight:400}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{color:rgba(255,255,255,.7);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:300;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--gold)}
+
+/* HERO - rustic elegant */
+.hero{min-height:85vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--charcoal) 0%,#3a2a1a 40%,var(--maroon) 100%)}
+.hero::before{content:'';position:absolute;inset:0;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23BFA14A' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E")}
+.hero-inner{max-width:1050px;margin:auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2;width:100%}
+.hero-text .est{font-size:.75rem;text-transform:uppercase;letter-spacing:6px;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+.hero-text .est::before,.hero-text .est::after{content:'';flex:0 0 30px;height:1px;background:var(--gold)}
+.hero-text h1{font-family:'EB Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.2;margin-bottom:1rem}
+.hero-text p{color:rgba(255,255,255,.6);font-size:.95rem;margin-bottom:2rem;font-weight:300}
+.hero-img{height:380px;border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:4rem;
+  background:linear-gradient(to bottom,var(--brick),var(--maroon));border:4px solid rgba(191,161,74,.2)}
+.hero-img::after{content:'📸 Foto del restaurante';position:absolute;bottom:1rem;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+.btn{display:inline-block;padding:.85rem 2rem;font-size:.8rem;font-weight:600;transition:.3s;cursor:pointer;text-transform:uppercase;letter-spacing:2px;border:none}
+.btn-gold{background:var(--gold);color:var(--charcoal);border-radius:2px}
+.btn-gold:hover{background:#ab8e3a}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:transparent;border-radius:2px;margin-left:1rem}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* TIMELINE */
+.timeline{padding:5rem 2rem;background:var(--paper);text-align:center}
+.timeline h2{font-family:'EB Garamond',serif;font-size:2rem;color:var(--charcoal);margin-bottom:.5rem}
+.timeline .sub{color:var(--wood);font-size:.9rem;margin-bottom:3rem}
+.gold-divider{width:60px;height:2px;background:var(--gold);margin:.8rem auto 0}
+.tl-items{max-width:700px;margin:auto;position:relative;padding-left:30px}
+.tl-items::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--gold);opacity:.3}
+.tl-item{text-align:left;margin-bottom:2rem;position:relative;padding-left:2rem}
+.tl-item::before{content:'';position:absolute;left:-26px;top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--paper)}
+.tl-item .year{font-family:'EB Garamond',serif;font-size:1.3rem;color:var(--maroon);font-weight:700}
+.tl-item p{color:#666;font-size:.9rem}
+
+/* SPECIALTIES */
+.specialties{padding:5rem 2rem;background:var(--cream)}
+.specialties h2{font-family:'EB Garamond',serif;font-size:2rem;text-align:center;color:var(--charcoal);margin-bottom:2.5rem}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:1050px;margin:auto}
+.spec{display:flex;gap:1.2rem;align-items:flex-start;background:#fff;padding:1.5rem;border-radius:6px;border-left:4px solid var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.spec-icon{font-size:2.5rem;flex-shrink:0}
+.spec h3{font-family:'EB Garamond',serif;font-size:1.2rem;color:var(--charcoal);margin-bottom:.3rem}
+.spec p{font-size:.85rem;color:#777}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;background:var(--charcoal);color:#fff;text-align:center}
+.contact h2{font-family:'EB Garamond',serif;font-size:2rem;color:var(--gold);margin-bottom:2rem}
+.contact-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:800px;margin:auto}
+.c-item{flex:1;min-width:200px;background:rgba(255,255,255,.05);padding:1.5rem;border-radius:4px;border-bottom:2px solid var(--gold)}
+.c-item .icon{font-size:1.5rem;margin-bottom:.5rem}
+.c-item h4{font-size:.85rem;color:var(--gold);margin-bottom:.3rem}
+.c-item p{font-size:.8rem;color:rgba(255,255,255,.5)}
+
+footer{background:var(--charcoal);color:rgba(255,255,255,.35);text-align:center;padding:1.5rem;font-size:.75rem;border-top:1px solid rgba(191,161,74,.15)}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-img{height:220px}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--charcoal);padding:1rem 2rem;gap:.8rem}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-ghost{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Las Costillas <span>D' Fuentes</span></a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#historia">Historia</a>
+      <a href="#platillos">Platillos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="est">Est. 1974</div>
+      <h1>Más de 50 años de tradición y sabor mexicano</h1>
+      <p>Las Costillas D' Fuentes — un legado familiar que ha alimentado generaciones en la colonia Nueva Santa María. Recetas que cuentan historias.</p>
+      <div>
+        <a href="#platillos" class="btn btn-gold">Nuestros Platillos</a>
+        <a href="#contacto" class="btn btn-ghost">Visítanos</a>
+      </div>
+    </div>
+    <!-- FOTO: Reemplazar con foto real del restaurante -->
+    <div class="hero-img">🍖</div>
+  </div>
+</section>
+
+<section id="historia" class="timeline">
+  <h2>Nuestra Historia</h2>
+  <div class="gold-divider"></div>
+  <p class="sub">Más de medio siglo de tradición familiar</p>
+  <div class="tl-items">
+    <div class="tl-item">
+      <div class="year">Años 70</div>
+      <p>La familia Fuentes abre un pequeño local de costillas en la calle Clavelinas. Las recetas de la abuela se convierten en el alma del negocio.</p>
+    </div>
+    <div class="tl-item">
+      <div class="year">Años 90</div>
+      <p>El restaurante se consolida como favorito del barrio. La segunda generación toma la cocina manteniendo el sazón original.</p>
+    </div>
+    <div class="tl-item">
+      <div class="year">Hoy</div>
+      <p>Con más de 50 años de historia, seguimos sirviendo las mismas recetas que enamoraron a nuestros primeros clientes. La tercera generación mantiene viva la tradición.</p>
+    </div>
+  </div>
+</section>
+
+<section id="platillos" class="specialties">
+  <h2>Especialidades de la Casa</h2>
+  <div class="gold-divider" style="margin-bottom:2.5rem"></div>
+  <div class="spec-grid">
+    <div class="spec">
+      <div class="spec-icon">🍖</div>
+      <div>
+        <h3>Costillas a la Parrilla</h3>
+        <p>Nuestra receta estrella por más de 50 años. Marinadas y asadas lentamente.</p>
+      </div>
+    </div>
+    <div class="spec">
+      <div class="spec-icon">🫕</div>
+      <div>
+        <h3>Mole Tradicional</h3>
+        <p>Mole casero preparado con la receta original de la familia.</p>
+      </div>
+    </div>
+    <div class="spec">
+      <div class="spec-icon">🥘</div>
+      <div>
+        <h3>Platillos Mexicanos</h3>
+        <p>Enchiladas, chilaquiles, pozole y más clásicos de la cocina mexicana.</p>
+      </div>
+    </div>
+    <div class="spec">
+      <div class="spec-icon">🍲</div>
+      <div>
+        <h3>Caldos y Sopas</h3>
+        <p>Caldo de res, sopa azteca y consomé. Perfectos para el alma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Visítanos</h2>
+  <div class="contact-grid">
+    <div class="c-item">
+      <div class="icon">📍</div>
+      <h4>Dirección</h4>
+      <p>Clavelinas 120, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="c-item">
+      <div class="icon">🕐</div>
+      <h4>Tradición</h4>
+      <p>+50 años sirviendo a la comunidad</p>
+    </div>
+    <div class="c-item">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h4>Ambiente</h4>
+      <p>Familiar, acogedor, con historia</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Las Costillas D' Fuentes — Clavelinas 120, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p>© 2025 Las Costillas D' Fuentes. +50 años de tradición.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

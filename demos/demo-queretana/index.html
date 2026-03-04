@@ -1,210 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panadería Tradicional Queretana | Pan Artesanal en Azcapotzalco</title>
-  <meta name="description" content="Panadería Tradicional Queretana — Pan dulce artesanal: conchas, cuernos, orejas, bolillos y teleras. Romero de Terreros 616, Col. Nueva Santa María, Azcapotzalco.">
-  <meta property="og:title" content="Panadería Tradicional Queretana">
-  <meta property="og:description" content="El sabor de la tradición en cada pieza. Pan artesanal en Azcapotzalco, CDMX.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../shared/base.css">
-  <style>
-    :root {
-      --color-primary: #8B5E3C;
-      --color-primary-dark: #5C3A22;
-      --color-accent: #E8D5B7;
-      --color-gold: #C8A96E;
-      --color-overlay: rgba(92, 58, 34, 0.6);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panadería Tradicional Queretana | Pan artesanal en Azcapotzalco</title>
+<meta name="description" content="Panadería Tradicional Queretana — pan artesanal mexicano en Romero de Terreros 616, Col. Nueva Santa María, Azcapotzalco.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:#3E2723;background:#FFF9F0;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --wheat:#D4A058;--brown:#5D3A1A;--cream:#FFF9F0;--warm:#F5E6D0;
+  --terra:#8B5E3C;--soft-pink:#F2D7C5;--dark:#2C1810;
+}
+
+/* NAVBAR - warm artisanal */
+nav{background:var(--brown);padding:1rem 2rem;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--wheat);font-weight:700}
+.logo small{display:block;font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:'Poppins',sans-serif;font-weight:300}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:400;transition:.3s}
+.nav-links a:hover{color:var(--wheat)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:26px;height:2.5px;background:var(--wheat);border-radius:2px}
+
+/* HERO - split layout */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:85vh}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 3rem;background:var(--warm)}
+.hero-text .pretitle{font-size:.8rem;text-transform:uppercase;letter-spacing:4px;color:var(--terra);margin-bottom:1rem}
+.hero-text h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--brown);line-height:1.15;margin-bottom:1rem}
+.hero-text p{color:#6D5040;font-size:1.05rem;margin-bottom:2rem;max-width:420px}
+.hero-image{background:linear-gradient(45deg,var(--wheat),var(--terra),var(--soft-pink));display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative}
+.hero-image::after{content:'📸 Foto de panadería';position:absolute;bottom:2rem;font-size:.9rem;color:rgba(255,255,255,.6);font-family:'Poppins',sans-serif}
+
+.btn{display:inline-block;padding:.85rem 2rem;border-radius:4px;font-weight:500;font-size:.95rem;transition:.3s;border:none;cursor:pointer}
+.btn-warm{background:var(--brown);color:#fff}
+.btn-warm:hover{background:var(--dark);transform:translateY(-2px)}
+.btn-call{background:transparent;border:2px solid var(--brown);color:var(--brown);margin-left:.8rem}
+.btn-call:hover{background:var(--brown);color:#fff}
+
+/* ABOUT */
+.about{padding:5rem 2rem;max-width:900px;margin:auto;text-align:center}
+.about h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brown);margin-bottom:.5rem}
+.divider{width:60px;height:3px;background:var(--wheat);margin:1rem auto 2rem;border-radius:2px}
+.about p{color:#5D4A3A;font-size:1rem;max-width:650px;margin:0 auto 1rem}
+
+/* PRODUCTS */
+.products{padding:5rem 2rem;background:var(--warm)}
+.products h2{font-family:'Cormorant Garamond',serif;font-size:2rem;text-align:center;color:var(--brown);margin-bottom:.5rem}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:1000px;margin:2rem auto 0}
+.product{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 15px rgba(0,0,0,.06);transition:.3s}
+.product:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.product-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+.product-img:nth-child(1){background:linear-gradient(135deg,#F5DEB3,#DEB887)}
+.product:nth-child(1) .product-img{background:linear-gradient(135deg,#F5DEB3,#DEB887)}
+.product:nth-child(2) .product-img{background:linear-gradient(135deg,#E8C9A0,#C49A6C)}
+.product:nth-child(3) .product-img{background:linear-gradient(135deg,#D4A058,#8B6914)}
+.product:nth-child(4) .product-img{background:linear-gradient(135deg,#F2D7C5,#D4956B)}
+.product:nth-child(5) .product-img{background:linear-gradient(135deg,#C49A6C,#8B5E3C)}
+.product-info{padding:1.2rem}
+.product-info h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brown);margin-bottom:.3rem}
+.product-info p{font-size:.85rem;color:#777}
+
+/* CONTACT */
+.contact{padding:5rem 2rem;text-align:center}
+.contact h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brown);margin-bottom:.5rem}
+.contact-grid{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;max-width:800px;margin:2rem auto 0}
+.contact-card{background:var(--warm);padding:2rem;border-radius:10px;min-width:200px;flex:1}
+.contact-card .icon{font-size:1.8rem;margin-bottom:.5rem}
+.contact-card h4{font-size:.95rem;color:var(--brown);margin-bottom:.3rem}
+.contact-card p{font-size:.85rem;color:#6D5040}
+.contact-card a{color:var(--brown);font-weight:500}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#fff;box-shadow:0 4px 15px rgba(37,211,102,.4);z-index:200;transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+
+/* FOOTER */
+footer{background:var(--brown);color:rgba(255,255,255,.7);padding:2rem;text-align:center;font-size:.85rem}
+footer .brand{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--wheat);margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  .hero-image{min-height:250px}
+  .hero-text{padding:3rem 1.5rem}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--brown);padding:1rem 2rem;gap:.8rem}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-call{margin-left:0;margin-top:.5rem}
+}
+</style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="navbar-brand">Panadería <span>Queretana</span></a>
-      <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Queretana<small>Panadería Tradicional</small></a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
     </div>
-  </nav>
-
-  <section id="inicio" class="hero" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1400&q=80');">
-    <div class="hero-content">
-      <p class="tagline">El sabor de la tradición</p>
-      <h1>Panadería Tradicional Queretana</h1>
-      <p>Pan dulce artesanal horneado con recetas familiares. Más de años de tradición panadera en Azcapotzalco.</p>
-      <a href="#productos" class="btn btn-primary">Nuestros Productos</a>
-      <a href="https://wa.me/525511077475" class="btn btn-outline">Haz tu pedido</a>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section id="productos" class="menu">
-    <div class="container">
-      <h2 class="section-title">Nuestros Productos</h2>
-      <p class="section-subtitle">Horneados frescos cada día con los mejores ingredientes</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&q=80" alt="Conchas"></div>
-          <div class="menu-card-body">
-            <h4>Conchas</h4>
-            <p>Las clásicas conchas de vainilla y chocolate, crujientes por fuera y esponjosas por dentro. El favorito de siempre.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1549931319-a545753467c8?w=400&q=80" alt="Cuernos y orejas"></div>
-          <div class="menu-card-body">
-            <h4>Cuernos y Orejas</h4>
-            <p>Cuernos hojaldrados con mantequilla y orejas caramelizadas. Perfectos para acompañar tu café de la mañana.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=400&q=80" alt="Bolillos y teleras"></div>
-          <div class="menu-card-body">
-            <h4>Bolillos y Teleras</h4>
-            <p>Pan blanco recién horneado, crujiente y perfecto para tortas, molletes o para acompañar tus comidas.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1558303926-f5d0b2ee8e9b?w=400&q=80" alt="Pan dulce variado"></div>
-          <div class="menu-card-body">
-            <h4>Pan Dulce Tradicional</h4>
-            <p>Polvorones, garibaldis, besos, empanadas y más. Toda la variedad del pan dulce mexicano en un solo lugar.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=400&q=80" alt="Pan de muerto"></div>
-          <div class="menu-card-body">
-            <h4>Pan de Muerto (Temporada)</h4>
-            <p>Suave, esponjoso y con aroma de azahar. Disponible en temporada de Día de Muertos con el sabor de siempre.</p>
-          </div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=400&q=80" alt="Rosca de reyes"></div>
-          <div class="menu-card-body">
-            <h4>Rosca de Reyes (Temporada)</h4>
-            <p>La tradicional rosca con ate, crema y frutos secos. Haz tu pedido con anticipación en enero.</p>
-          </div>
-        </div>
-      </div>
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <p class="pretitle">Desde el corazón de Azcapotzalco</p>
+    <h1>Pan artesanal con tradición queretana</h1>
+    <p>Horneamos cada pieza con recetas heredadas de generación en generación. El auténtico sabor del pan mexicano en tu colonia.</p>
+    <div>
+      <a href="#contacto" class="btn btn-warm">Visítanos</a>
+      <a href="tel:5511077475" class="btn btn-call">📞 Llamar</a>
     </div>
-  </section>
+  </div>
+  <!-- HERO IMAGE: Reemplazar con foto real de la panadería -->
+  <div class="hero-image">🍞</div>
+</section>
 
-  <section id="nosotros" class="about">
-    <div class="container">
-      <h2 class="section-title">Nuestra Panadería</h2>
-      <p class="section-subtitle">Tradición y sabor en cada pieza</p>
-      <div class="divider"></div>
-      <div class="menu-grid">
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=400&q=80" alt="Interior panadería"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&q=80" alt="Panadero artesanal"></div>
-        </div>
-        <div class="menu-card fade-in">
-          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1534620808146-d33bb07f0077?w=400&q=80" alt="Pan recién horneado"></div>
-        </div>
-      </div>
+<section id="nosotros" class="about">
+  <h2>Nuestra Tradición</h2>
+  <div class="divider"></div>
+  <p>Somos la Panadería Tradicional Queretana, un negocio familiar que trae el auténtico sabor del pan de Querétaro a la colonia Nueva Santa María. Cada día horneamos con ingredientes frescos y el cariño de siempre.</p>
+  <p>Conchas, cuernos, polvorones, orejas, cochinitos y mucho más — todo recién salido del horno, como debe ser.</p>
+</section>
+
+<section id="productos" class="products">
+  <h2>Nuestro Pan</h2>
+  <div class="divider" style="margin:1rem auto 0"></div>
+  <div class="products-grid">
+    <div class="product">
+      <!-- FOTO: Reemplazar con foto real -->
+      <div class="product-img">🥐</div>
+      <div class="product-info"><h3>Conchas</h3><p>El clásico pan dulce mexicano, suave y esponjoso.</p></div>
     </div>
-  </section>
-
-  <section id="ubicacion" class="location">
-    <div class="container">
-      <h2 class="section-title">Encuéntranos</h2>
-      <p class="section-subtitle">Ven por tu pan calientito</p>
-      <div class="divider"></div>
-      <div class="location-grid">
-        <div class="map-wrapper">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.5!2d-99.178!3d19.473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUm9tZXJvIGRlIFRlcnJlcm9zIDYxNg!5e0!3m2!1ses!2smx!4v1700000000000" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="location-info">
-          <h3>¿Cómo llegar?</h3>
-          <div class="info-item">
-            <span class="icon">📍</span>
-            <div><strong>Dirección</strong><p>Romero de Terreros 616, Col. Nueva Santa María,<br>Azcapotzalco, CDMX, CP 02800</p></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">📞</span>
-            <div><strong>Teléfono</strong><a href="tel:+525511077475">(55) 1107 7475</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">💬</span>
-            <div><strong>WhatsApp</strong><a href="https://wa.me/525511077475">Envíanos mensaje</a></div>
-          </div>
-          <div class="info-item">
-            <span class="icon">🕐</span>
-            <div>
-              <strong>Horario</strong>
-              <table class="schedule-table">
-                <tr><td>Lunes - Sábado</td><td>6:00 AM - 9:00 PM</td></tr>
-                <tr><td>Domingo</td><td>7:00 AM - 3:00 PM</td></tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="product">
+      <div class="product-img">🍩</div>
+      <div class="product-info"><h3>Polvorones</h3><p>Crujientes y dulces, se deshacen en la boca.</p></div>
     </div>
-  </section>
-
-  <section id="contacto" class="contact-cta">
-    <div class="container">
-      <h2>¡Haz tu pedido especial!</h2>
-      <p>Pedidos para fiestas, eventos y temporadas. Escríbenos por WhatsApp con anticipación.</p>
-      <a href="https://wa.me/525511077475?text=Hola%2C%20quiero%20hacer%20un%20pedido" class="btn btn-primary">Pedir por WhatsApp</a>
+    <div class="product">
+      <div class="product-img">🥖</div>
+      <div class="product-info"><h3>Pan de Sal</h3><p>Birotes, teleras y bolillos recién horneados.</p></div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Panadería Tradicional Queretana</h4>
-          <p>Pan artesanal con recetas de tradición en la colonia Nueva Santa María, Azcapotzalco.</p>
-        </div>
-        <div>
-          <h4>Menú</h4>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <p>📍 Romero de Terreros 616, Col. Nueva Santa María</p>
-          <p>📞 <a href="tel:+525511077475">(55) 1107 7475</a></p>
-          <p>💬 <a href="https://wa.me/525511077475">WhatsApp</a></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Panadería Tradicional Queretana. Sitio creado por <a href="#">Tu Agencia Web</a>.</p>
-      </div>
+    <div class="product">
+      <div class="product-img">🎂</div>
+      <div class="product-info"><h3>Pan de Temporada</h3><p>Rosca de reyes, pan de muerto, hojaldras y más.</p></div>
     </div>
-  </footer>
+    <div class="product">
+      <div class="product-img">🧁</div>
+      <div class="product-info"><h3>Galletas & Más</h3><p>Variedad de galletas, orejas, cuernos y empanadas.</p></div>
+    </div>
+  </div>
+</section>
 
-  <a href="https://wa.me/525511077475?text=Hola%2C%20quiero%20información" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+<section id="contacto" class="contact">
+  <h2>Visítanos</h2>
+  <div class="divider"></div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">📍</div>
+      <h4>Dirección</h4>
+      <p>Romero de Terreros 616, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">📞</div>
+      <h4>Teléfono</h4>
+      <p><a href="tel:5511077475">(55) 1107 7475</a></p>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🕐</div>
+      <h4>Horario</h4>
+      <p>Lunes a Domingo<br>Abierto desde temprano</p>
+    </div>
+  </div>
+</section>
 
-  <script>
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
+<a href="https://wa.me/5511077475" class="wa-float" title="WhatsApp">💬</a>
+
+<footer>
+  <div class="brand">Panadería Tradicional Queretana</div>
+  <p>Romero de Terreros 616, Col. Nueva Santa María, Azcapotzalco, CDMX</p>
+  <p style="margin-top:.5rem">© 2025 Panadería Queretana. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
 </body>
 </html>

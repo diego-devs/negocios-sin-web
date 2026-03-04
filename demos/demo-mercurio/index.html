@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo Mercurio de Transportes | Logística Confiable en CDMX</title>
+<meta name="description" content="Grupo Mercurio de Transportes — empresa de transporte y logística en Piña 297, Col. Nueva Santa María, Azcapotzalco, CDMX.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#fff;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+:root{
+  --navy:#0A1628;--blue:#1565C0;--blue-light:#42A5F5;--steel:#607D8B;
+  --accent:#FF6B35;--gray-bg:#F4F6F8;--white:#fff;
+}
+
+/* NAV - corporate clean */
+nav{background:var(--navy);padding:0;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--blue)}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;color:#fff;font-weight:700;display:flex;align-items:center;gap:.6rem}
+.logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.logo span{color:var(--blue-light)}
+.nav-links{display:flex;gap:1.8rem}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:1px;transition:.3s}
+.nav-links a:hover{color:var(--blue-light)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:#fff;border-radius:1px}
+
+/* HERO - bold corporate */
+.hero{min-height:85vh;background:linear-gradient(135deg,var(--navy) 0%,#162447 50%,#1a1a2e 100%);display:flex;align-items:center;padding:2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(21,101,192,.15),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(66,165,245,.1),transparent 70%);border-radius:50%}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;position:relative;z-index:2;width:100%}
+.hero-text h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#fff;line-height:1.2;margin-bottom:1rem}
+.hero-text h1 span{color:var(--blue-light)}
+.hero-text p{color:rgba(255,255,255,.7);font-size:1.05rem;margin-bottom:2rem;max-width:480px}
+.hero-stats{display:flex;gap:2rem;margin-top:2rem}
+.stat{text-align:center}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:var(--blue-light)}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px}
+.hero-visual{height:350px;background:linear-gradient(135deg,var(--blue),var(--navy));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;border:1px solid rgba(66,165,245,.2)}
+.hero-visual::after{content:'📸 Foto de flota';position:absolute;bottom:1rem;font-size:.8rem;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif}
+
+.btn{display:inline-block;padding:.85rem 2rem;border-radius:6px;font-weight:600;font-size:.9rem;transition:.3s;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#1976D2;transform:translateY(-2px);box-shadow:0 8px 25px rgba(21,101,192,.3)}
+.btn-ghost{border:2px solid rgba(255,255,255,.3);color:#fff;margin-left:1rem}
+.btn-ghost:hover{border-color:var(--blue-light);color:var(--blue-light)}
+
+/* SERVICES */
+.services{padding:5rem 1.5rem;background:var(--gray-bg)}
+.section-header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.section-header h2{font-family:'Space Grotesk',sans-serif;font-size:2rem;color:var(--navy);margin-bottom:.5rem}
+.section-header p{color:var(--steel);font-size:.95rem}
+.blue-line{width:50px;height:3px;background:var(--blue);margin:.8rem auto 0;border-radius:2px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:1100px;margin:auto}
+.svc{background:#fff;border-radius:12px;padding:2rem;border-left:4px solid var(--blue);box-shadow:0 2px 10px rgba(0,0,0,.04);transition:.3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.svc-icon{font-size:2rem;margin-bottom:1rem}
+.svc h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;color:var(--navy);margin-bottom:.5rem}
+.svc p{color:var(--steel);font-size:.9rem}
+
+/* WHY US */
+.why{padding:5rem 1.5rem;background:var(--navy);color:#fff}
+.why .section-header h2{color:#fff}
+.why .section-header p{color:rgba(255,255,255,.6)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:1000px;margin:auto;text-align:center}
+.why-item .num{font-family:'Space Grotesk',sans-serif;font-size:2.5rem;font-weight:700;color:var(--blue-light);margin-bottom:.5rem}
+.why-item h4{font-size:1rem;margin-bottom:.3rem}
+.why-item p{font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* CONTACT */
+.contact{padding:5rem 1.5rem;background:#fff}
+.contact-inner{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-info h2{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:1.5rem}
+.info-row{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+.info-row .icon{width:40px;height:40px;background:var(--gray-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.info-row h4{font-size:.9rem;color:var(--navy);margin-bottom:.2rem}
+.info-row p{font-size:.85rem;color:var(--steel)}
+.info-row a{color:var(--blue);font-weight:500}
+.contact-map{height:300px;background:linear-gradient(135deg,var(--gray-bg),#ddd);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#999;font-size:.9rem}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:2rem 1.5rem;text-align:center;font-size:.8rem;border-top:3px solid var(--blue)}
+footer .brand{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;color:#fff;margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{height:200px}
+  .hero-stats{flex-wrap:wrap;gap:1.5rem}
+  .contact-inner{grid-template-columns:1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:1rem 1.5rem;gap:.8rem;border-top:1px solid rgba(255,255,255,.1)}
+  .nav-links.active{display:flex}
+  .hamburger{display:flex}
+  .btn-ghost{margin-left:0;margin-top:.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo"><div class="logo-icon">🚛</div>Grupo <span>Mercurio</span></a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Transporte y logística <span>confiable</span> para tu negocio</h1>
+      <p>Grupo Mercurio de Transportes — soluciones integrales de transporte con puntualidad, seguridad y compromiso en cada entrega.</p>
+      <div>
+        <a href="#contacto" class="btn btn-blue">Solicitar Cotización</a>
+        <a href="tel:5553553606" class="btn btn-ghost">📞 Llamar</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Años de experiencia</div></div>
+        <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Clientes satisfechos</div></div>
+        <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Disponibilidad</div></div>
+      </div>
+    </div>
+    <!-- HERO IMAGE: Reemplazar con foto de flota/camiones -->
+    <div class="hero-visual">🚛</div>
+  </div>
+</section>
+
+<section id="servicios" class="services">
+  <div class="section-header">
+    <h2>Nuestros Servicios</h2>
+    <p>Soluciones de transporte adaptadas a tus necesidades</p>
+    <div class="blue-line"></div>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-icon">📦</div>
+      <h3>Transporte de Carga</h3>
+      <p>Movimiento seguro de mercancía en la CDMX y zona metropolitana. Carga general, paquetería y mudanzas.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">🗺️</div>
+      <h3>Logística y Distribución</h3>
+      <p>Planificación de rutas, almacenaje y distribución eficiente para optimizar tu cadena de suministro.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">⏰</div>
+      <h3>Entregas Programadas</h3>
+      <p>Servicio puntual de entregas recurrentes para negocios que necesitan confiabilidad.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon">🛡️</div>
+      <h3>Transporte Especializado</h3>
+      <p>Manejo de carga frágil, voluminosa o de valor. Equipo especializado y personal capacitado.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" class="why">
+  <div class="section-header">
+    <h2>¿Por qué Grupo Mercurio?</h2>
+    <p>Números que respaldan nuestra trayectoria</p>
+    <div class="blue-line"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="num">98%</div>
+      <h4>Entregas a tiempo</h4>
+      <p>Puntualidad como prioridad</p>
+    </div>
+    <div class="why-item">
+      <div class="num">100%</div>
+      <h4>Asegurado</h4>
+      <p>Tu carga siempre protegida</p>
+    </div>
+    <div class="why-item">
+      <div class="num">CDMX</div>
+      <h4>Cobertura Total</h4>
+      <p>Ciudad y zona metropolitana</p>
+    </div>
+    <div class="why-item">
+      <div class="num">24h</div>
+      <h4>Respuesta Rápida</h4>
+      <p>Cotizaciones en menos de un día</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h2>Contáctanos</h2>
+      <div class="info-row">
+        <div class="icon">📍</div>
+        <div><h4>Oficinas</h4><p>Piña 297, Col. Nueva Santa María, Azcapotzalco, CDMX</p></div>
+      </div>
+      <div class="info-row">
+        <div class="icon">📞</div>
+        <div><h4>Teléfono</h4><p><a href="tel:5553553606">(55) 5355 3606</a></p></div>
+      </div>
+      <div class="info-row">
+        <div class="icon">💬</div>
+        <div><h4>WhatsApp</h4><p><a href="https://wa.me/5553553606">Enviar mensaje</a></p></div>
+      </div>
+      <div class="info-row">
+        <div class="icon">🕐</div>
+        <div><h4>Horario</h4><p>Lunes a Viernes 8:00 - 18:00<br>Sábados 9:00 - 14:00</p></div>
+      </div>
+    </div>
+    <!-- MAPA: Reemplazar con Google Maps embed -->
+    <div class="contact-map">🗺️ Mapa de ubicación</div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Grupo Mercurio de Transportes</div>
+  <p>Piña 297, Col. Nueva Santa María, Azcapotzalco, CDMX | Tel: (55) 5355 3606</p>
+  <p style="margin-top:.5rem">© 2025 Grupo Mercurio. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+document.querySelector('.hamburger')?.addEventListener('click',function(){this.nextElementSibling.classList.toggle('active')});
+</script>
+</body>
+</html>

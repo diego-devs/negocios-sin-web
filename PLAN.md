@@ -43,3 +43,8 @@ Crear páginas web profesionales para negocios locales que no tienen presencia o
 - [ ] Crear template base
 - [ ] Crear primeras demos
 - [ ] Primer contacto
+
+## Notas de venta (actualizado 2026-03-03)
+- En mensajes a nuevos negocios, mencionar que si continúan con la compra se les pide su logo y fotos para personalizar la página
+- NO incluir eso en el primer contacto a negocios ya contactados — usarlo como segundo mensaje cuando muestren interés
+- Mensaje de seguimiento cuando contesten: pedir logo + fotos, ofrecer ayuda con logo si no tienen
